@@ -40,7 +40,6 @@ export function GenJamHeader({
 
       {/* Title */}
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight" style={{ color: '#1a1a1a' }}>
-        {emoji && <span className="mr-3">{emoji}</span>}
         {title}
       </h1>
 

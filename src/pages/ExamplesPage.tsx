@@ -114,10 +114,10 @@ export function ExamplesPage() {
         emoji="🎬"
       />
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-10 sm:mt-12 space-y-8">
         {/* Tips Card */}
         <div className="card bg-secondary-50 border border-secondary-200">
-          <h3 className="font-bold mb-3">🎯 What to Look For</h3>
+          <h3 className="font-bold mb-6">🎯 What to Look For</h3>
           <ul className="grid md:grid-cols-2 gap-2 text-sm text-gray-700">
             <li>• <strong>Pacing</strong> - How do they maintain interest?</li>
             <li>• <strong>Style</strong> - What visual choices make it unique?</li>

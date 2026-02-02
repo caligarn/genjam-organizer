@@ -108,15 +108,15 @@ export function SkillsSurveyPage() {
         emoji="🎯"
       />
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-10 sm:mt-12 space-y-8">
         {/* Skills Grid */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-3">Your Creative Skills</h2>
+          <h2 className="text-xl font-bold mb-6">Your Creative Skills</h2>
           <p className="text-gray-600 mb-8">
             Select the skills you have and rate your experience level. Click a skill to select it.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {SKILLS.map((skill) => {
               const isSelected = selectedSkills[skill.id] !== undefined;
               const level = selectedSkills[skill.id];
@@ -184,7 +184,7 @@ export function SkillsSurveyPage() {
 
         {/* Preferred Role */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-3">Preferred Role</h2>
+          <h2 className="text-xl font-bold mb-6">Preferred Role</h2>
           <p className="text-gray-600 mb-6">
             What role do you prefer to take in a creative project?
           </p>
@@ -209,7 +209,7 @@ export function SkillsSurveyPage() {
 
         {/* What are you excited to learn */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-3">What Are You Excited to Learn?</h2>
+          <h2 className="text-xl font-bold mb-6">What Are You Excited to Learn?</h2>
           <p className="text-gray-600 mb-6">
             Tell us what you're hoping to explore or improve during this GenJam.
           </p>

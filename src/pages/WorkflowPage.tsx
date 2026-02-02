@@ -107,7 +107,7 @@ export function WorkflowPage() {
         emoji="📋"
       />
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-8 space-y-6">
         {/* Total Time Summary */}
         <div className="card bg-gradient-hero text-white">
           <div className="flex items-center justify-between">

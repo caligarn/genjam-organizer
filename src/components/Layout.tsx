@@ -35,29 +35,18 @@ export function Layout({
     <div className="min-h-screen flex flex-col">
       {/* Main Content */}
       <main className="flex-1">
-        <div className={cn('max-w-5xl mx-auto px-4 py-8', className)}>
+        <div className={cn('max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-6 sm:py-8', className)}>
           {/* Header with Logo */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6">
             <Logo />
           </div>
 
           {/* Progress Bar */}
-          <StepProgressBar currentStep={currentStep} className="mb-8" />
-
-          {/* Top Navigation */}
-          <PageNavigation
-            backTo={backTo}
-            backLabel={backLabel}
-            nextTo={nextTo}
-            nextLabel={nextLabel}
-            nextDisabled={nextDisabled}
-            onNext={onNext}
-            className="mb-6"
-          />
+          <StepProgressBar currentStep={currentStep} className="mb-6" />
 
           {/* Timer and Instructions */}
           {showTimer && (
-            <EventTimer currentStep={currentStep} className="mb-8" />
+            <EventTimer currentStep={currentStep} className="mb-6" />
           )}
 
           {/* Page Content */}

@@ -35,7 +35,7 @@ export function FollowupPage() {
     <Layout currentStep={11} backTo="/voting" backLabel="Back to Voting" showTimer={false}>
       <GenJamHeader title="Thank You for Participating!" subtitle="Stay connected with the Machine Cinema community" currentStep={11} emoji="🎉" />
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-8 space-y-6">
         {/* Celebration Banner */}
         <div className="card bg-gradient-hero text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.15),transparent)]" />

@@ -101,7 +101,7 @@ export function IcebreakerPage() {
         emoji="🎮"
       />
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-8 space-y-6">
         {/* Prompt Card */}
         <div className="card bg-gradient-hero text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent)]" />

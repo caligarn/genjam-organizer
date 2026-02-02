@@ -73,15 +73,16 @@ export function StoryboardPage() {
       nextTo="/submit"
       nextLabel="Continue to Submit"
       onNext={() => navigate('/submit')}
+      header={
+        <GenJamHeader
+          title="Storyboard Workspace"
+          subtitle="Visualize your film before production begins"
+          currentStep={8}
+          emoji="🎨"
+        />
+      }
     >
-      <GenJamHeader
-        title="Storyboard Workspace"
-        subtitle="Visualize your film before production begins"
-        currentStep={8}
-        emoji="🎨"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10">
         {/* Shot Types Reference */}
         <div className="card bg-secondary-50 border border-secondary-200">
           <div className="flex items-center gap-2 mb-6">

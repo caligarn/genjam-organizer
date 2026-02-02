@@ -8,6 +8,7 @@ import { GenJamFooter } from './GenJamFooter';
 
 interface LayoutProps {
   children: ReactNode;
+  header?: ReactNode;
   currentStep: number;
   backTo?: string | null;
   backLabel?: string;
@@ -21,6 +22,7 @@ interface LayoutProps {
 
 export function Layout({
   children,
+  header,
   currentStep,
   backTo,
   backLabel,
@@ -41,13 +43,15 @@ export function Layout({
             <Logo size="lg" />
           </div>
 
-          {/* Timer and Instructions */}
-          {showTimer && (
-            <EventTimer currentStep={currentStep} className="mb-10" />
+          {header && (
+            <div className="mb-10 sm:mb-12">{header}</div>
           )}
 
-          {/* Step Progress Bar */}
-          <StepProgressBar currentStep={currentStep} className="mb-10" />
+          {/* Timer and Progress */}
+          <div className="flex flex-col gap-8 sm:gap-10 mb-8 sm:mb-10">
+            {showTimer && <EventTimer currentStep={currentStep} />}
+            <StepProgressBar currentStep={currentStep} />
+          </div>
 
           {/* Navigation Button - positioned before content */}
           <PageNavigation
@@ -57,7 +61,7 @@ export function Layout({
             nextLabel={nextLabel}
             nextDisabled={nextDisabled}
             onNext={onNext}
-            className="mb-12"
+            className="mt-6 mb-12"
           />
 
           {/* Page Content */}

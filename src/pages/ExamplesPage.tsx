@@ -106,15 +106,16 @@ export function ExamplesPage() {
       nextTo="/storyboard"
       nextLabel="Continue to Storyboard"
       onNext={() => navigate('/storyboard')}
+      header={
+        <GenJamHeader
+          title="Inspiration Gallery"
+          subtitle="Learn from past GenJam winners and standout submissions"
+          currentStep={7}
+          emoji="🎬"
+        />
+      }
     >
-      <GenJamHeader
-        title="Inspiration Gallery"
-        subtitle="Learn from past GenJam winners and standout submissions"
-        currentStep={7}
-        emoji="🎬"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10">
         {/* Tips Card */}
         <div className="card bg-secondary-50 border border-secondary-200">
           <h3 className="font-bold mb-6">🎯 What to Look For</h3>

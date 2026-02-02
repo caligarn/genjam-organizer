@@ -141,15 +141,16 @@ export function VotingPage() {
       nextLabel="Submit All Votes"
       nextDisabled={!isComplete()}
       onNext={handleSubmit}
+      header={
+        <GenJamHeader
+          title="Vote for Your Favorites"
+          subtitle="Select 3 films in each category to cast your votes"
+          currentStep={10}
+          emoji="🏆"
+        />
+      }
     >
-      <GenJamHeader
-        title="Vote for Your Favorites"
-        subtitle="Select 3 films in each category to cast your votes"
-        currentStep={10}
-        emoji="🏆"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10">
         {/* Category Tabs */}
         <div className="flex gap-2 overflow-x-auto pb-2">
           {CATEGORIES.map((category) => {

@@ -170,15 +170,16 @@ export function CheatSheetPage() {
       nextTo="/examples"
       nextLabel="Continue to Examples"
       onNext={() => navigate('/examples')}
+      header={
+        <GenJamHeader
+          title="GenJam Cheat Sheet"
+          subtitle="Essential tools and resources for your creative journey"
+          currentStep={6}
+          emoji="🛠️"
+        />
+      }
     >
-      <GenJamHeader
-        title="GenJam Cheat Sheet"
-        subtitle="Essential tools and resources for your creative journey"
-        currentStep={6}
-        emoji="🛠️"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10">
         {/* Sponsors */}
         <div className="card">
           <div className="flex items-center gap-2 mb-6">

@@ -93,15 +93,16 @@ export function IcebreakerPage() {
       nextTo="/ideas-submission"
       nextLabel="Continue to Ideas"
       onNext={() => navigate('/ideas-submission')}
+      header={
+        <GenJamHeader
+          title="Icebreaker Challenge"
+          subtitle="Let's have some fun and get to know each other!"
+          currentStep={3}
+          emoji="🎮"
+        />
+      }
     >
-      <GenJamHeader
-        title="Icebreaker Challenge"
-        subtitle="Let's have some fun and get to know each other!"
-        currentStep={3}
-        emoji="🎮"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10">
         {/* Prompt Card */}
         <div className="card bg-gradient-hero text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent)]" />

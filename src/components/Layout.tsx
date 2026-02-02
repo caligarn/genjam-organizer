@@ -34,19 +34,19 @@ export function Layout({
   return (
     <div className="min-h-screen flex flex-col">
       {/* Main Content */}
-      <main className="flex-1">
-        <div className={cn('max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 py-6 sm:py-8', className)}>
+      <main className="flex-1 flex justify-center">
+        <div className={cn('w-full max-w-3xl px-5 sm:px-8 py-6 sm:py-8', className)}>
           {/* Header with Logo */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-5">
             <Logo />
           </div>
 
           {/* Progress Bar */}
-          <StepProgressBar currentStep={currentStep} className="mb-6" />
+          <StepProgressBar currentStep={currentStep} className="mb-5" />
 
           {/* Timer and Instructions */}
           {showTimer && (
-            <EventTimer currentStep={currentStep} className="mb-6" />
+            <EventTimer currentStep={currentStep} className="mb-5" />
           )}
 
           {/* Page Content */}
@@ -60,7 +60,7 @@ export function Layout({
             nextLabel={nextLabel}
             nextDisabled={nextDisabled}
             onNext={onNext}
-            className="mt-8"
+            className="mt-8 pb-2"
           />
         </div>
       </main>

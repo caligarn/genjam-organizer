@@ -105,7 +105,7 @@ export function IdeasSubmissionPage() {
         emoji="💡"
       />
 
-      <div className="mt-8 space-y-6">
+      <div className="mt-6 space-y-5">
         {/* Today's Theme */}
         <div className="card bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200">
           <div className="flex items-start gap-4">

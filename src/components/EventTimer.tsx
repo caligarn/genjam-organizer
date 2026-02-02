@@ -95,7 +95,7 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
       {/* Countdown Timer */}
       <div
         className={cn(
-          'rounded-2xl p-6 text-white text-center transition-all duration-500',
+          'rounded-xl sm:rounded-2xl p-4 sm:p-6 text-white text-center transition-all duration-500',
           isExpired
             ? 'bg-gradient-to-br from-gray-600 to-gray-700'
             : isWarning
@@ -103,24 +103,24 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
             : 'bg-gradient-hero'
         )}
       >
-        <div className="flex items-center justify-center gap-2 mb-3">
-          <Clock className="w-5 h-5 opacity-80" />
-          <span className="text-sm font-medium uppercase tracking-wider opacity-80">
+        <div className="flex items-center justify-center gap-2 mb-2 sm:mb-3">
+          <Clock className="w-4 h-4 sm:w-5 sm:h-5 opacity-80" />
+          <span className="text-xs sm:text-sm font-medium uppercase tracking-wider opacity-80">
             {isExpired ? "Time's Up!" : 'Time Remaining'}
           </span>
         </div>
 
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-3 sm:gap-4">
           <div className="flex flex-col items-center">
             <span className="countdown-digit">{formatNumber(timeLeft.hours)}</span>
             <span className="countdown-label">Hours</span>
           </div>
-          <span className="text-4xl font-light opacity-50 mt-[-20px]">:</span>
+          <span className="text-2xl sm:text-4xl font-light opacity-50 mt-[-14px] sm:mt-[-20px]">:</span>
           <div className="flex flex-col items-center">
             <span className="countdown-digit">{formatNumber(timeLeft.minutes)}</span>
             <span className="countdown-label">Minutes</span>
           </div>
-          <span className="text-4xl font-light opacity-50 mt-[-20px]">:</span>
+          <span className="text-2xl sm:text-4xl font-light opacity-50 mt-[-14px] sm:mt-[-20px]">:</span>
           <div className="flex flex-col items-center">
             <span className="countdown-digit">{formatNumber(timeLeft.seconds)}</span>
             <span className="countdown-label">Seconds</span>
@@ -128,24 +128,24 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
         </div>
 
         {isWarning && !isExpired && (
-          <p className="mt-4 text-sm font-medium animate-pulse">
-            ⚠️ Less than 30 minutes remaining! Finish up your work!
+          <p className="mt-3 text-sm font-medium animate-pulse">
+            Less than 30 minutes remaining! Finish up your work!
           </p>
         )}
       </div>
 
       {/* Contextual Instructions */}
-      <div className="bg-secondary-50 rounded-2xl p-5 border border-secondary-200">
+      <div className="bg-secondary-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-secondary-200">
         <div className="flex gap-3">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 hidden sm:block">
             <div className="w-10 h-10 rounded-xl bg-secondary-100 flex items-center justify-center">
               <Info className="w-5 h-5 text-secondary-600" />
             </div>
           </div>
-          <div className="flex-1 space-y-2">
-            <p className="text-gray-700 font-medium">{instruction.current}</p>
-            <div className="flex items-center gap-2 text-sm text-secondary-600">
-              <Sparkles className="w-4 h-4" />
+          <div className="flex-1 space-y-1.5">
+            <p className="text-sm sm:text-base text-gray-700 font-medium">{instruction.current}</p>
+            <div className="flex items-start gap-2 text-xs sm:text-sm text-secondary-600">
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 flex-shrink-0" />
               <span>{instruction.next}</span>
             </div>
           </div>

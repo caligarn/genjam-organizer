@@ -178,7 +178,7 @@ export function CheatSheetPage() {
         emoji="🛠️"
       />
 
-      <div className="mt-8 space-y-6">
+      <div className="mt-6 space-y-5">
         {/* Sponsors */}
         <div className="card">
           <div className="flex items-center gap-2 mb-4">

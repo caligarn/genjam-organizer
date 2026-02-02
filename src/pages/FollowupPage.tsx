@@ -35,7 +35,7 @@ export function FollowupPage() {
     <Layout currentStep={11} backTo="/voting" backLabel="Back to Voting" showTimer={false}>
       <GenJamHeader title="Thank You for Participating!" subtitle="Stay connected with the Machine Cinema community" currentStep={11} emoji="🎉" />
 
-      <div className="mt-8 space-y-6">
+      <div className="mt-6 space-y-5">
         {/* Celebration Banner */}
         <div className="card bg-gradient-hero text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.15),transparent)]" />
@@ -47,13 +47,13 @@ export function FollowupPage() {
         </div>
 
         {/* Event Stats */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {STATS.map((stat) => (
             <div key={stat.label} className="card text-center">
-              <div className="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 mx-auto mb-3">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 mx-auto mb-2 sm:mb-3">
                 {stat.icon}
               </div>
-              <p className="text-3xl font-bold text-gray-900">{stat.value}</p>
+              <p className="text-2xl sm:text-3xl font-bold text-gray-900">{stat.value}</p>
               <p className="text-sm text-gray-500">{stat.label}</p>
             </div>
           ))}

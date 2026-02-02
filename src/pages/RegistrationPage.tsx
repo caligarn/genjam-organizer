@@ -70,7 +70,7 @@ export function RegistrationPage() {
         emoji="🎬"
       />
 
-      <div className="mt-8 grid md:grid-cols-2 gap-6">
+      <div className="mt-6 grid md:grid-cols-2 gap-5">
         {/* Registration Form */}
         <div className="card">
           <h2 className="text-xl font-bold mb-6 flex items-center gap-2">

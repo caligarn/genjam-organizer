@@ -81,7 +81,7 @@ export function StoryboardPage() {
         emoji="🎨"
       />
 
-      <div className="mt-8 space-y-6">
+      <div className="mt-6 space-y-5">
         {/* Shot Types Reference */}
         <div className="card bg-secondary-50 border border-secondary-200">
           <div className="flex items-center gap-2 mb-3">

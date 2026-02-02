@@ -13,7 +13,7 @@ export function GenJamFooter({ className }: GenJamFooterProps) {
         className
       )}
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">

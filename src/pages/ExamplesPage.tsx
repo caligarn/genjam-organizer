@@ -114,7 +114,7 @@ export function ExamplesPage() {
         emoji="🎬"
       />
 
-      <div className="mt-8 space-y-6">
+      <div className="mt-6 space-y-5">
         {/* Tips Card */}
         <div className="card bg-secondary-50 border border-secondary-200">
           <h3 className="font-bold mb-3">🎯 What to Look For</h3>

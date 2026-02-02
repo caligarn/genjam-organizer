@@ -42,7 +42,7 @@ export function StepProgressBar({ currentStep, className }: StepProgressBarProps
             style={{ width: `${(currentStep / 11) * 100}%` }}
           />
         </div>
-        <div className="flex items-center justify-between gap-1">
+        <div className="flex items-center justify-between">
           {STEPS.map((step) => {
             const isCompleted = step.id < currentStep;
             const isCurrent = step.id === currentStep;
@@ -52,7 +52,7 @@ export function StepProgressBar({ currentStep, className }: StepProgressBarProps
                 onClick={() => navigate(step.path)}
                 title={step.label}
                 className={cn(
-                  'w-7 h-7 rounded-full flex items-center justify-center text-xs font-semibold transition-all duration-200',
+                  'w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center text-[10px] sm:text-xs font-semibold transition-all duration-200',
                   isCompleted && 'bg-primary-200 text-primary-700 hover:bg-primary-300',
                   isCurrent && 'bg-gradient-primary text-white shadow-glow scale-110',
                   !isCompleted && !isCurrent && 'bg-gray-200 text-gray-500 hover:bg-gray-300'

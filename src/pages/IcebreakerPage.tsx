@@ -101,7 +101,7 @@ export function IcebreakerPage() {
         emoji="🎮"
       />
 
-      <div className="mt-8 space-y-6">
+      <div className="mt-6 space-y-5">
         {/* Prompt Card */}
         <div className="card bg-gradient-hero text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent)]" />
@@ -123,7 +123,7 @@ export function IcebreakerPage() {
                 New Prompt
               </button>
             </div>
-            <p className="text-xl md:text-2xl font-medium leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed">
               "{currentPrompt}"
             </p>
           </div>

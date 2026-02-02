@@ -107,21 +107,21 @@ export function WorkflowPage() {
         emoji="📋"
       />
 
-      <div className="mt-8 space-y-6">
+      <div className="mt-6 space-y-5">
         {/* Total Time Summary */}
         <div className="card bg-gradient-hero text-white">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center">
-                <Clock className="w-7 h-7" />
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                <Clock className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               <div>
-                <h2 className="text-xl font-bold">Total Event Time</h2>
-                <p className="opacity-80">From start to winners announcement</p>
+                <h2 className="text-lg sm:text-xl font-bold">Total Event Time</h2>
+                <p className="text-sm opacity-80">From start to winners announcement</p>
               </div>
             </div>
-            <div className="text-right">
-              <p className="text-4xl font-bold">~6 hrs</p>
+            <div className="text-left sm:text-right">
+              <p className="text-3xl sm:text-4xl font-bold">~6 hrs</p>
               <p className="text-sm opacity-80">Plan your time wisely!</p>
             </div>
           </div>
@@ -156,7 +156,7 @@ export function WorkflowPage() {
                       <p className="text-gray-600 mb-4">{phase.description}</p>
 
                       {/* Tasks */}
-                      <div className="grid grid-cols-2 gap-2 mb-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
                         {phase.tasks.map((task, i) => (
                           <div key={i} className="flex items-center gap-2 text-sm text-gray-700">
                             <CheckCircle2 className="w-4 h-4 text-success-500 flex-shrink-0" />

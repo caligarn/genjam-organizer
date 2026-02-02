@@ -131,7 +131,7 @@ export function SubmitPage() {
         emoji="🎥"
       />
 
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-10 sm:mt-12 space-y-20">
         {/* Upload Section */}
         <div className="card">
           <h2 className="text-xl font-bold mb-6 flex items-center gap-2">

@@ -32,23 +32,29 @@ export function StepProgressBar({ currentStep, className }: StepProgressBarProps
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
             <span className="text-2xl">🎬</span>
-            <span className="text-sm font-semibold text-gray-700">
+            <span className="text-sm font-bold text-[#1a1a1a]">
               Step {currentStep} of {TOTAL_STEPS}
             </span>
           </div>
-          <span className="text-sm text-gray-500 font-medium">
+          <span className="text-sm text-[#1a1a1a] font-medium">
             {STEPS[currentStep - 1]?.label}
           </span>
         </div>
-        <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+        <div 
+          className="h-3 bg-white rounded-full overflow-hidden"
+          style={{ border: '2px solid #1a1a1a' }}
+        >
           <div
-            className="h-full bg-gradient-primary rounded-full transition-all duration-500 ease-out"
-            style={{ width: `${(currentStep / TOTAL_STEPS) * 100}%` }}
+            className="h-full rounded-full transition-all duration-500 ease-out"
+            style={{ 
+              width: `${(currentStep / TOTAL_STEPS) * 100}%`,
+              backgroundColor: '#FFD700'
+            }}
           />
         </div>
       </div>
 
-      {/* Desktop: Full step indicators */}
+      {/* Desktop: Full step indicators - Machine Cinema style */}
       <div className="hidden md:block">
         <div className="flex items-center justify-between">
           {STEPS.map((step, index) => {
@@ -66,11 +72,17 @@ export function StepProgressBar({ currentStep, className }: StepProgressBarProps
                 >
                   <div
                     className={cn(
-                      'w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 cursor-pointer border-2',
-                      isCompleted && 'bg-primary-100 border-primary-300 text-primary-700 group-hover:bg-primary-200 group-hover:scale-105',
-                      isCurrent && 'bg-gradient-primary border-primary-500 text-white shadow-lg scale-110',
-                      isPending && 'bg-gray-50 border-gray-200 text-gray-400 group-hover:bg-gray-100 group-hover:border-gray-300 group-hover:scale-105'
+                      'w-11 h-11 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 cursor-pointer',
+                      isCompleted && 'group-hover:scale-105',
+                      isCurrent && 'scale-110',
+                      isPending && 'group-hover:scale-105'
                     )}
+                    style={{
+                      backgroundColor: isCompleted ? '#00FF66' : isCurrent ? '#FFD700' : 'white',
+                      border: '3px solid #1a1a1a',
+                      color: '#1a1a1a',
+                      boxShadow: isCurrent ? '4px 4px 0 #1a1a1a' : 'none'
+                    }}
                   >
                     {isCompleted ? (
                       <Check className="w-5 h-5" />
@@ -82,10 +94,10 @@ export function StepProgressBar({ currentStep, className }: StepProgressBarProps
                   </div>
                   <span
                     className={cn(
-                      'mt-2 text-xs font-medium transition-colors',
-                      isCurrent && 'text-primary-600 font-semibold',
-                      isCompleted && 'text-primary-500 group-hover:text-primary-700',
-                      isPending && 'text-gray-400 group-hover:text-gray-600'
+                      'mt-2 text-xs font-bold transition-colors uppercase',
+                      isCurrent && 'text-[#1a1a1a]',
+                      isCompleted && 'text-[#00D954]',
+                      isPending && 'text-gray-400 group-hover:text-[#1a1a1a]'
                     )}
                   >
                     {step.shortLabel}
@@ -95,10 +107,11 @@ export function StepProgressBar({ currentStep, className }: StepProgressBarProps
                 {/* Connector line */}
                 {index < STEPS.length - 1 && (
                   <div
-                    className={cn(
-                      'flex-1 h-0.5 mx-2 transition-colors duration-300 rounded-full',
-                      step.id < currentStep ? 'bg-primary-300' : 'bg-gray-200'
-                    )}
+                    className="flex-1 h-1 mx-2 transition-colors duration-300"
+                    style={{
+                      backgroundColor: step.id < currentStep ? '#FFD700' : '#E5E5E5',
+                      border: step.id < currentStep ? '1px solid #1a1a1a' : 'none'
+                    }}
                   />
                 )}
               </div>

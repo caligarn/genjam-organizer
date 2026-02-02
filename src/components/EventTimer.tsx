@@ -88,59 +88,73 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
 
   return (
     <div className={cn('space-y-8', className)}>
-      {/* Countdown Timer Card */}
+      {/* Countdown Timer Card - Machine Cinema style */}
       <div
         className={cn(
-          'rounded-3xl p-8 sm:p-10 text-white text-center transition-all duration-500 shadow-xl',
+          'rounded-2xl p-8 sm:p-10 text-center transition-all duration-500 border-3',
           isExpired
-            ? 'bg-gradient-to-br from-gray-600 to-gray-700'
+            ? 'bg-gray-200 border-gray-400 text-gray-600'
             : isWarning
-            ? 'bg-gradient-to-br from-red-500 to-red-600 animate-pulse-glow'
-            : 'bg-gradient-hero'
+            ? 'bg-[#FF3366] border-[#1a1a1a] text-white animate-pulse-glow'
+            : 'bg-[#1a1a1a] border-[#1a1a1a] text-white'
         )}
+        style={{ 
+          borderWidth: '3px',
+          boxShadow: isExpired ? 'none' : '6px 6px 0 #FFD700'
+        }}
       >
         <div className="flex items-center justify-center gap-2 mb-6">
           <Clock className="w-5 h-5 opacity-90" />
-          <span className="text-sm font-semibold uppercase tracking-widest opacity-90">
+          <span className="text-sm font-bold uppercase tracking-widest opacity-90">
             {isExpired ? "Time's Up!" : 'Event Deadline'}
           </span>
         </div>
 
         <div className="flex items-center justify-center gap-6 sm:gap-8">
           <div className="flex flex-col items-center">
-            <span className="countdown-digit">{formatNumber(timeLeft.hours)}</span>
+            <span className="countdown-digit text-[#FFD700]">{formatNumber(timeLeft.hours)}</span>
             <span className="countdown-label">Hours</span>
           </div>
-          <span className="text-4xl sm:text-5xl font-light opacity-40 -mt-6">:</span>
+          <span className="text-4xl sm:text-5xl font-light opacity-40 -mt-6 text-[#FFD700]">:</span>
           <div className="flex flex-col items-center">
-            <span className="countdown-digit">{formatNumber(timeLeft.minutes)}</span>
+            <span className="countdown-digit text-[#FFD700]">{formatNumber(timeLeft.minutes)}</span>
             <span className="countdown-label">Minutes</span>
           </div>
-          <span className="text-4xl sm:text-5xl font-light opacity-40 -mt-6">:</span>
+          <span className="text-4xl sm:text-5xl font-light opacity-40 -mt-6 text-[#FFD700]">:</span>
           <div className="flex flex-col items-center">
-            <span className="countdown-digit">{formatNumber(timeLeft.seconds)}</span>
+            <span className="countdown-digit text-[#FFD700]">{formatNumber(timeLeft.seconds)}</span>
             <span className="countdown-label">Seconds</span>
           </div>
         </div>
 
         {isWarning && !isExpired && (
-          <p className="mt-6 text-sm font-semibold animate-pulse bg-white/20 rounded-full px-6 py-2 inline-block">
+          <p className="mt-6 text-sm font-bold animate-pulse bg-white/20 rounded-full px-6 py-2 inline-block uppercase">
             ⚠️ Less than 30 minutes remaining!
           </p>
         )}
       </div>
 
-      {/* Contextual Instructions Card */}
-      <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm">
+      {/* Contextual Instructions Card - Machine Cinema style */}
+      <div 
+        className="bg-white rounded-2xl p-6 sm:p-8 border-3"
+        style={{ 
+          borderWidth: '3px',
+          borderColor: '#1a1a1a',
+          boxShadow: '6px 6px 0 #1a1a1a'
+        }}
+      >
         <div className="flex gap-4">
           <div className="flex-shrink-0">
-            <div className="w-12 h-12 rounded-2xl bg-gray-100 flex items-center justify-center">
-              <Info className="w-6 h-6 text-gray-600" />
+            <div 
+              className="w-12 h-12 rounded-xl flex items-center justify-center"
+              style={{ backgroundColor: '#00D4FF', border: '2px solid #1a1a1a' }}
+            >
+              <Info className="w-6 h-6 text-[#1a1a1a]" />
             </div>
           </div>
           <div className="flex-1 space-y-3">
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{instruction.current}</p>
-            <p className="text-sm sm:text-base text-primary-600 font-medium flex items-center gap-2">
+            <p className="text-base sm:text-lg text-[#1a1a1a] leading-relaxed font-medium">{instruction.current}</p>
+            <p className="text-sm sm:text-base text-[#FF3366] font-bold flex items-center gap-2">
               <Lightbulb className="w-4 h-4 flex-shrink-0" />
               <span>{instruction.next}</span>
             </p>

@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import { Logo } from './Logo';
+import { StepProgressBar } from './StepProgressBar';
 import { EventTimer } from './EventTimer';
 import { PageNavigation } from './PageNavigation';
 import { GenJamFooter } from './GenJamFooter';
@@ -42,8 +43,11 @@ export function Layout({
 
           {/* Timer and Instructions */}
           {showTimer && (
-            <EventTimer currentStep={currentStep} className="mb-12" />
+            <EventTimer currentStep={currentStep} className="mb-10" />
           )}
+
+          {/* Step Progress Bar */}
+          <StepProgressBar currentStep={currentStep} className="mb-10" />
 
           {/* Navigation Button - positioned before content */}
           <PageNavigation

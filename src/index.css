@@ -1,40 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
 
-/* Machine Cinema GenJam Design System */
+/* Machine Cinema Brand Design System */
+/* Colors: Yellow (#FFD700), Black (#1a1a1a), Pink (#FF3366), Cyan (#00D4FF), Green (#00FF66), Purple (#9966FF) */
 
 @theme {
-  --color-primary-50: oklch(0.97 0.02 280);
-  --color-primary-100: oklch(0.94 0.05 280);
-  --color-primary-200: oklch(0.88 0.10 280);
-  --color-primary-300: oklch(0.78 0.15 280);
-  --color-primary-400: oklch(0.68 0.20 280);
-  --color-primary-500: oklch(0.58 0.25 280);
-  --color-primary-600: oklch(0.50 0.25 280);
-  --color-primary-700: oklch(0.42 0.22 280);
-  --color-primary-800: oklch(0.35 0.18 280);
-  --color-primary-900: oklch(0.28 0.14 280);
-  --color-primary-950: oklch(0.18 0.10 280);
+  /* Primary: Yellow/Gold - Machine Cinema brand color */
+  --color-primary-50: #FFFEF0;
+  --color-primary-100: #FFFACC;
+  --color-primary-200: #FFF599;
+  --color-primary-300: #FFED66;
+  --color-primary-400: #FFE433;
+  --color-primary-500: #FFD700;
+  --color-primary-600: #E6C200;
+  --color-primary-700: #B39700;
+  --color-primary-800: #806C00;
+  --color-primary-900: #4D4100;
+  --color-primary-950: #1A1600;
 
-  --color-secondary-50: oklch(0.97 0.02 240);
-  --color-secondary-100: oklch(0.94 0.04 240);
-  --color-secondary-200: oklch(0.88 0.08 240);
-  --color-secondary-300: oklch(0.78 0.12 240);
-  --color-secondary-400: oklch(0.68 0.16 240);
-  --color-secondary-500: oklch(0.58 0.20 240);
-  --color-secondary-600: oklch(0.50 0.20 240);
-  --color-secondary-700: oklch(0.42 0.18 240);
+  /* Secondary: Black/Dark */
+  --color-secondary-50: #F5F5F5;
+  --color-secondary-100: #E5E5E5;
+  --color-secondary-200: #CCCCCC;
+  --color-secondary-300: #999999;
+  --color-secondary-400: #666666;
+  --color-secondary-500: #333333;
+  --color-secondary-600: #1a1a1a;
+  --color-secondary-700: #111111;
 
-  --color-accent-400: oklch(0.78 0.16 50);
-  --color-accent-500: oklch(0.70 0.18 50);
-  --color-accent-600: oklch(0.62 0.18 50);
+  /* Accent: Pink */
+  --color-accent-400: #FF6699;
+  --color-accent-500: #FF3366;
+  --color-accent-600: #E6004D;
 
-  --color-success-400: oklch(0.75 0.18 145);
-  --color-success-500: oklch(0.65 0.20 145);
-  --color-success-600: oklch(0.55 0.18 145);
+  /* Cyan accent */
+  --color-cyan-400: #33DDFF;
+  --color-cyan-500: #00D4FF;
+  --color-cyan-600: #00B3D9;
 
-  --color-error-500: oklch(0.60 0.22 25);
-  --color-warning-500: oklch(0.80 0.18 85);
+  /* Green accent */
+  --color-green-400: #33FF88;
+  --color-green-500: #00FF66;
+  --color-green-600: #00D954;
+
+  /* Purple accent */
+  --color-purple-400: #B399FF;
+  --color-purple-500: #9966FF;
+  --color-purple-600: #7733FF;
+
+  --color-success-400: #33FF88;
+  --color-success-500: #00FF66;
+  --color-success-600: #00D954;
+
+  --color-error-500: #FF3366;
+  --color-warning-500: #FFD700;
 }
 
 * {
@@ -49,10 +68,10 @@ html {
 
 body {
   font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-  background: linear-gradient(180deg, #fafafa 0%, #f5f5f7 50%, #f0f0f5 100%);
+  background: #FFFEF5;
   background-attachment: fixed;
   min-height: 100vh;
-  color: #1a1a2e;
+  color: #1a1a1a;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -75,43 +94,43 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c4c4c4;
+  background: #1a1a1a;
   border-radius: 5px;
   border: 2px solid #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: #333333;
 }
 
 :focus-visible {
-  outline: 2px solid oklch(0.58 0.25 280);
+  outline: 3px solid #FFD700;
   outline-offset: 2px;
 }
 
 ::selection {
-  background: oklch(0.78 0.15 280);
-  color: white;
+  background: #FFD700;
+  color: #1a1a1a;
 }
 
 /* Custom utilities as regular CSS classes */
 .text-gradient {
-  background: linear-gradient(135deg, oklch(0.58 0.25 280) 0%, oklch(0.50 0.25 280) 50%, oklch(0.58 0.20 240) 100%);
+  background: linear-gradient(135deg, #FFD700 0%, #FF3366 50%, #9966FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .bg-gradient-primary {
-  background: linear-gradient(135deg, oklch(0.58 0.25 280) 0%, oklch(0.48 0.25 280) 100%);
+  background: linear-gradient(135deg, #FFD700 0%, #E6C200 100%);
 }
 
 .bg-gradient-hero {
-  background: linear-gradient(135deg, oklch(0.50 0.22 280) 0%, oklch(0.42 0.25 270) 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
 }
 
 .shadow-glow {
-  box-shadow: 0 0 30px oklch(0.58 0.25 280 / 0.25), 0 8px 32px oklch(0.20 0.02 280 / 0.1);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.3), 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .animate-float {
@@ -136,8 +155,8 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 20px oklch(0.58 0.25 280 / 0.3); }
-  50% { box-shadow: 0 0 40px oklch(0.58 0.25 280 / 0.5); }
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.5); }
 }
 
 @keyframes slideUp {
@@ -150,15 +169,14 @@ h1, h2, h3, h4, h5, h6, .font-display {
   to { opacity: 1; }
 }
 
-/* Card Component - More spacious */
+/* Card Component - Machine Cinema style with black border */
 .card {
   background: white;
   border-radius: 1.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 3px solid #1a1a1a;
   padding: 2rem;
   box-shadow: 
-    0 1px 2px rgba(0, 0, 0, 0.04),
-    0 4px 12px rgba(0, 0, 0, 0.04);
+    6px 6px 0 #1a1a1a;
   transition: all 0.3s ease;
 }
 
@@ -178,12 +196,11 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 .card:hover {
   box-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.04),
-    0 8px 24px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
+    8px 8px 0 #1a1a1a;
+  transform: translate(-2px, -2px);
 }
 
-/* Button Components */
+/* Button Components - Machine Cinema style */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -191,81 +208,82 @@ h1, h2, h3, h4, h5, h6, .font-display {
   gap: 0.625rem;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
   transition: all 0.2s ease;
   cursor: pointer;
-  border: none;
+  border: 3px solid #1a1a1a;
   min-height: 3.25rem;
   letter-spacing: -0.01em;
+  text-transform: uppercase;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, oklch(0.58 0.25 280) 0%, oklch(0.48 0.25 280) 100%);
-  color: white;
-  box-shadow: 
-    0 2px 8px oklch(0.58 0.25 280 / 0.35),
-    0 1px 2px oklch(0.58 0.25 280 / 0.2);
+  background: #FFD700;
+  color: #1a1a1a;
+  box-shadow: 4px 4px 0 #1a1a1a;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 
-    0 4px 16px oklch(0.58 0.25 280 / 0.4),
-    0 2px 4px oklch(0.58 0.25 280 / 0.25);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #1a1a1a;
 }
 
 .btn-primary:active {
-  transform: translateY(0) scale(0.98);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #1a1a1a;
 }
 
 .btn-secondary {
   background: white;
-  color: oklch(0.50 0.25 280);
-  border: 2px solid oklch(0.90 0.08 280);
+  color: #1a1a1a;
+  box-shadow: 4px 4px 0 #1a1a1a;
 }
 
 .btn-secondary:hover {
-  border-color: oklch(0.70 0.18 280);
-  background: oklch(0.98 0.01 280);
+  background: #FFFEF0;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #1a1a1a;
 }
 
 .btn-ghost {
   background: transparent;
-  color: #6b7280;
+  color: #1a1a1a;
+  border: none;
+  box-shadow: none;
 }
 
 .btn-ghost:hover {
-  color: oklch(0.50 0.25 280);
-  background: oklch(0.97 0.02 280);
+  color: #FF3366;
+  background: rgba(255, 51, 102, 0.1);
 }
 
-/* Input Components - More spacious */
+/* Input Components - Machine Cinema style */
 .input {
   width: 100%;
   padding: 1rem 1.25rem;
   border-radius: 1rem;
-  border: 2px solid #e5e7eb;
+  border: 3px solid #1a1a1a;
   background: white;
   transition: all 0.2s ease;
   font-size: 1rem;
 }
 
 .input:focus {
-  border-color: oklch(0.68 0.20 280);
+  border-color: #FFD700;
   outline: none;
-  box-shadow: 0 0 0 4px oklch(0.94 0.05 280);
+  box-shadow: 4px 4px 0 #FFD700;
 }
 
 .input::placeholder {
-  color: #9ca3af;
+  color: #999999;
 }
 
 .input:hover:not(:focus) {
-  border-color: #d1d5db;
+  border-color: #333333;
 }
 
-/* Badge Components */
+/* Badge Components - Machine Cinema style */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -273,25 +291,28 @@ h1, h2, h3, h4, h5, h6, .font-display {
   padding: 0.5rem 1.25rem;
   border-radius: 9999px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
+  border: 2px solid #1a1a1a;
+  text-transform: uppercase;
 }
 
 .badge-primary {
-  background: oklch(0.94 0.05 280);
-  color: oklch(0.40 0.22 280);
+  background: #FFD700;
+  color: #1a1a1a;
 }
 
 .badge-secondary {
-  background: oklch(0.94 0.04 240);
-  color: oklch(0.42 0.18 240);
-}
-
-.badge-accent {
-  background: oklch(0.70 0.18 50);
+  background: #1a1a1a;
   color: white;
 }
 
-/* Countdown Timer */
+.badge-accent {
+  background: #FF3366;
+  color: white;
+  border-color: #FF3366;
+}
+
+/* Countdown Timer - Machine Cinema style */
 .countdown-digit {
   font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 3rem;
@@ -318,7 +339,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
   letter-spacing: 0.1em;
   opacity: 0.85;
   margin-top: 0.75rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 @media (min-width: 640px) {

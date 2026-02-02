@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import { Logo } from './Logo';
-import { StepProgressBar } from './StepProgressBar';
 import { EventTimer } from './EventTimer';
 import { PageNavigation } from './PageNavigation';
 import { GenJamFooter } from './GenJamFooter';
@@ -35,22 +34,30 @@ export function Layout({
     <div className="min-h-screen flex flex-col">
       {/* Main Content */}
       <main className="flex-1 flex justify-center">
-        <div className={cn('w-full max-w-2xl px-5 sm:px-6 py-8 sm:py-10', className)}>
+        <div className={cn('w-full max-w-4xl px-6 sm:px-8 lg:px-12 py-10 sm:py-14', className)}>
           {/* Header with Logo */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-10">
             <Logo size="lg" />
           </div>
 
           {/* Timer and Instructions */}
           {showTimer && (
-            <EventTimer currentStep={currentStep} className="mb-8" />
+            <EventTimer currentStep={currentStep} className="mb-12" />
           )}
 
-          {/* Progress Bar */}
-          <StepProgressBar currentStep={currentStep} className="mb-8" />
+          {/* Navigation Button - positioned before content */}
+          <PageNavigation
+            backTo={backTo}
+            backLabel={backLabel}
+            nextTo={nextTo}
+            nextLabel={nextLabel}
+            nextDisabled={nextDisabled}
+            onNext={onNext}
+            className="mb-12"
+          />
 
           {/* Page Content */}
-          <div className="animate-fade-in space-y-6">{children}</div>
+          <div className="animate-fade-in">{children}</div>
 
           {/* Bottom Navigation */}
           <PageNavigation
@@ -60,7 +67,7 @@ export function Layout({
             nextLabel={nextLabel}
             nextDisabled={nextDisabled}
             onNext={onNext}
-            className="mt-10"
+            className="mt-14"
           />
         </div>
       </main>

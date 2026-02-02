@@ -108,15 +108,15 @@ export function SkillsSurveyPage() {
         emoji="🎯"
       />
 
-      <div className="mt-6 space-y-5">
+      <div className="mt-10 space-y-8">
         {/* Skills Grid */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-2">Your Creative Skills</h2>
-          <p className="text-gray-600 mb-6">
+          <h2 className="text-xl font-bold mb-3">Your Creative Skills</h2>
+          <p className="text-gray-600 mb-8">
             Select the skills you have and rate your experience level. Click a skill to select it.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {SKILLS.map((skill) => {
               const isSelected = selectedSkills[skill.id] !== undefined;
               const level = selectedSkills[skill.id];
@@ -125,17 +125,17 @@ export function SkillsSurveyPage() {
                 <div
                   key={skill.id}
                   className={cn(
-                    'rounded-xl border-2 p-4 transition-all duration-200 cursor-pointer',
+                    'rounded-2xl border-2 p-5 transition-all duration-200 cursor-pointer',
                     isSelected
                       ? 'border-primary-400 bg-primary-50'
                       : 'border-gray-200 bg-white hover:border-primary-200 hover:bg-primary-50/50'
                   )}
                   onClick={() => toggleSkill(skill.id)}
                 >
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-4">
                     <div
                       className={cn(
-                        'w-10 h-10 rounded-xl flex items-center justify-center transition-colors',
+                        'w-12 h-12 rounded-xl flex items-center justify-center transition-colors flex-shrink-0',
                         isSelected
                           ? 'bg-primary-500 text-white'
                           : 'bg-gray-100 text-gray-500'
@@ -144,18 +144,18 @@ export function SkillsSurveyPage() {
                       {skill.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900">{skill.name}</h3>
-                      <p className="text-sm text-gray-500">{skill.description}</p>
+                      <h3 className="font-semibold text-gray-900 text-lg">{skill.name}</h3>
+                      <p className="text-sm text-gray-500 mt-1">{skill.description}</p>
                     </div>
                   </div>
 
                   {/* Experience Level Selector */}
                   {isSelected && (
                     <div
-                      className="mt-4 pt-4 border-t border-primary-200"
+                      className="mt-5 pt-5 border-t border-primary-200"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <p className="text-sm font-medium text-gray-700 mb-2">
+                      <p className="text-sm font-medium text-gray-700 mb-3">
                         Experience Level:
                       </p>
                       <div className="flex flex-wrap gap-2">
@@ -164,7 +164,7 @@ export function SkillsSurveyPage() {
                             key={exp.value}
                             onClick={() => setSkillLevel(skill.id, exp.value)}
                             className={cn(
-                              'px-3 py-1 rounded-full text-xs font-medium transition-all',
+                              'px-4 py-2 rounded-full text-sm font-medium transition-all',
                               level === exp.value
                                 ? 'bg-primary-500 text-white'
                                 : 'bg-white text-gray-600 hover:bg-primary-100'
@@ -184,18 +184,18 @@ export function SkillsSurveyPage() {
 
         {/* Preferred Role */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-2">Preferred Role</h2>
+          <h2 className="text-xl font-bold mb-3">Preferred Role</h2>
           <p className="text-gray-600 mb-6">
             What role do you prefer to take in a creative project?
           </p>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-4">
             {PREFERRED_ROLES.map((role) => (
               <button
                 key={role}
                 onClick={() => setPreferredRole(role)}
                 className={cn(
-                  'px-4 py-2 rounded-xl border-2 font-medium transition-all',
+                  'px-5 py-3 rounded-xl border-2 font-medium transition-all',
                   preferredRole === role
                     ? 'border-primary-500 bg-primary-100 text-primary-700'
                     : 'border-gray-200 bg-white text-gray-700 hover:border-primary-300'
@@ -209,8 +209,8 @@ export function SkillsSurveyPage() {
 
         {/* What are you excited to learn */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-2">What Are You Excited to Learn?</h2>
-          <p className="text-gray-600 mb-4">
+          <h2 className="text-xl font-bold mb-3">What Are You Excited to Learn?</h2>
+          <p className="text-gray-600 mb-6">
             Tell us what you're hoping to explore or improve during this GenJam.
           </p>
 
@@ -218,14 +218,14 @@ export function SkillsSurveyPage() {
             value={excitedToLearn}
             onChange={(e) => setExcitedToLearn(e.target.value)}
             placeholder="I'm excited to learn about AI video generation tools and how to create compelling narratives using AI..."
-            className="input min-h-[120px] resize-none"
+            className="input min-h-[150px] resize-none"
           />
         </div>
 
         {/* Summary */}
         {Object.keys(selectedSkills).length > 0 && (
-          <div className="bg-primary-50 rounded-xl p-4 border border-primary-200">
-            <p className="text-sm text-primary-700">
+          <div className="bg-primary-50 rounded-2xl p-6 border border-primary-200">
+            <p className="text-base text-primary-700">
               <span className="font-semibold">
                 {Object.keys(selectedSkills).length} skill{Object.keys(selectedSkills).length !== 1 ? 's' : ''}
               </span>{' '}

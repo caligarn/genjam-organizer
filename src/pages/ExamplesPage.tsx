@@ -114,7 +114,7 @@ export function ExamplesPage() {
         emoji="🎬"
       />
 
-      <div className="mt-6 space-y-5">
+      <div className="mt-10 space-y-8">
         {/* Tips Card */}
         <div className="card bg-secondary-50 border border-secondary-200">
           <h3 className="font-bold mb-3">🎯 What to Look For</h3>
@@ -171,9 +171,9 @@ export function ExamplesPage() {
               </div>
 
               {/* Info */}
-              <div className="p-4">
+              <div className="p-5">
                 <h3 className="font-bold text-lg mb-1">{film.title}</h3>
-                <p className="text-sm text-gray-500 mb-2">{film.team} • {film.event}</p>
+                <p className="text-sm text-gray-500 mb-3">{film.team} • {film.event}</p>
                 <p className="text-sm text-gray-600 line-clamp-2">{film.description}</p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export function ExamplesPage() {
 
       {/* Modal */}
       {selectedFilm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80" onClick={() => setSelectedFilm(null)}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-5 bg-black/80" onClick={() => setSelectedFilm(null)}>
           <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             {/* Video placeholder */}
             <div className="aspect-video bg-gray-900 flex items-center justify-center relative">
@@ -199,7 +199,7 @@ export function ExamplesPage() {
               </div>
               <button
                 onClick={() => setSelectedFilm(null)}
-                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70"
+                className="absolute top-5 right-4 w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -227,7 +227,7 @@ export function ExamplesPage() {
               <p className="text-gray-700">{selectedFilm.description}</p>
 
               <div>
-                <h4 className="font-semibold mb-2">Tools Used</h4>
+                <h4 className="font-semibold mb-3">Tools Used</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedFilm.tools.map((tool) => (
                     <span key={tool} className="px-3 py-1 bg-gray-100 rounded-full text-sm">{tool}</span>
@@ -236,7 +236,7 @@ export function ExamplesPage() {
               </div>
 
               <div>
-                <h4 className="font-semibold mb-2">Notable Techniques</h4>
+                <h4 className="font-semibold mb-3">Notable Techniques</h4>
                 <ul className="space-y-1">
                   {selectedFilm.techniques.map((technique) => (
                     <li key={technique} className="text-sm text-gray-600">• {technique}</li>

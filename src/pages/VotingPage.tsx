@@ -107,15 +107,15 @@ export function VotingPage() {
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-100 mb-6">
             <PartyPopper className="w-10 h-10 text-primary-600" />
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
             🎉 Thank You for Participating!
           </h1>
           <p className="text-lg text-gray-600 max-w-md mx-auto mb-8">
             Your votes have been submitted successfully. Thank you for being part of GenJam 2025!
           </p>
           <div className="card max-w-md mx-auto">
-            <h3 className="font-bold mb-4">Stay Connected</h3>
-            <p className="text-sm text-gray-600 mb-4">
+            <h3 className="font-bold mb-6">Stay Connected</h3>
+            <p className="text-sm text-gray-600 mb-6">
               Follow Machine Cinema for future events and community updates.
             </p>
             <a
@@ -162,7 +162,7 @@ export function VotingPage() {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={cn(
-                  'flex items-center gap-2 px-4 py-3 rounded-xl font-medium whitespace-nowrap transition-all',
+                  'flex items-center gap-2 px-4 py-3 rounded-2xl font-medium whitespace-nowrap transition-all',
                   isActive
                     ? `${colors.bg} text-white shadow-lg`
                     : `${colors.light} ${colors.text} ${colors.border} border hover:opacity-80`
@@ -183,14 +183,14 @@ export function VotingPage() {
         </div>
 
         {/* Category Description */}
-        <div className={cn('rounded-xl p-4 border', activeColors.light, activeColors.border)}>
+        <div className={cn('rounded-2xl p-5 border', activeColors.light, activeColors.border)}>
           <p className={cn('text-sm', activeColors.text)}>
             {CATEGORIES.find((c) => c.id === activeCategory)?.description}
           </p>
         </div>
 
         {/* Submissions Grid */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-5">
           {SUBMISSIONS.map((submission) => {
             const isSelected = votes[activeCategory].includes(submission.id);
             const canSelect = votes[activeCategory].length < 3;
@@ -200,7 +200,7 @@ export function VotingPage() {
                 key={submission.id}
                 onClick={() => (isSelected || canSelect) && toggleVote(submission.id)}
                 className={cn(
-                  'relative rounded-xl overflow-hidden cursor-pointer transition-all group',
+                  'relative rounded-2xl overflow-hidden cursor-pointer transition-all group',
                   isSelected && `ring-4 ${activeColors.ring} ring-offset-2`,
                   !isSelected && !canSelect && 'opacity-50 cursor-not-allowed'
                 )}
@@ -247,8 +247,8 @@ export function VotingPage() {
 
         {/* Vote Status */}
         <div className="card">
-          <h3 className="font-bold mb-4">Vote Summary</h3>
-          <div className="grid gap-4">
+          <h3 className="font-bold mb-6">Vote Summary</h3>
+          <div className="grid gap-5">
             {CATEGORIES.map((category) => {
               const colors = getCategoryColor(category.color);
               const voteCount = votes[category.id].length;
@@ -258,11 +258,11 @@ export function VotingPage() {
                 <div
                   key={category.id}
                   className={cn(
-                    'rounded-xl p-4 border',
+                    'rounded-2xl p-5 border',
                     isComplete ? `${colors.light} ${colors.border}` : 'bg-gray-50 border-gray-200'
                   )}
                 >
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-3">
                     <span className="font-medium">{category.name}</span>
                     {isComplete ? (
                       <span className={cn('text-sm font-medium', colors.text)}>✓ Complete</span>

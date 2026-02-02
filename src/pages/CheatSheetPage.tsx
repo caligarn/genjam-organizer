@@ -178,10 +178,10 @@ export function CheatSheetPage() {
         emoji="🛠️"
       />
 
-      <div className="mt-6 space-y-5">
+      <div className="mt-10 space-y-8">
         {/* Sponsors */}
         <div className="card">
-          <div className="flex items-center gap-2 mb-4">
+          <div className="flex items-center gap-2 mb-6">
             <Sparkles className="w-5 h-5 text-primary-500" />
             <h2 className="text-xl font-bold">Today's Sponsors</h2>
           </div>
@@ -189,7 +189,7 @@ export function CheatSheetPage() {
           <div className="flex justify-center gap-8 flex-wrap">
             {SPONSORS.map((sponsor) => (
               <div key={sponsor.name} className="flex flex-col items-center gap-2">
-                <div className="w-16 h-16 rounded-xl bg-gray-100 flex items-center justify-center text-3xl">
+                <div className="w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center text-3xl">
                   {sponsor.logo}
                 </div>
                 <span className="text-sm font-medium text-gray-600">{sponsor.name}</span>
@@ -202,13 +202,13 @@ export function CheatSheetPage() {
         {TOOL_CATEGORIES.map((category) => (
           <div key={category.id} className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className={cn('w-10 h-10 rounded-xl bg-gradient-to-br text-white flex items-center justify-center', category.color)}>
+              <div className={cn('w-10 h-10 rounded-2xl bg-gradient-to-br text-white flex items-center justify-center', category.color)}>
                 {category.icon}
               </div>
               <h2 className="text-xl font-bold">{category.name}</h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-5">
               {category.tools.map((tool) => (
                 <div key={tool.name} className="card">
                   <div className="flex items-start justify-between mb-3">

@@ -107,12 +107,12 @@ export function WorkflowPage() {
         emoji="📋"
       />
 
-      <div className="mt-6 space-y-5">
+      <div className="mt-10 space-y-8">
         {/* Total Time Summary */}
         <div className="card bg-gradient-hero text-white">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div className="flex items-center gap-3 sm:gap-4">
-              <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+            <div className="flex items-center gap-3 sm:gap-5">
+              <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-white/20 flex items-center justify-center flex-shrink-0">
                 <Clock className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               <div>
@@ -142,21 +142,21 @@ export function WorkflowPage() {
 
                 {/* Phase Card */}
                 <div className={cn('card md:ml-20')}>
-                  <div className="flex items-start gap-4">
-                    <div className="md:hidden w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                  <div className="flex items-start gap-5">
+                    <div className="md:hidden w-12 h-12 rounded-2xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
                       {phase.icon}
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center justify-between gap-4 mb-2">
+                      <div className="flex items-center justify-between gap-5 mb-3">
                         <h3 className="text-lg font-bold">
                           <span className="text-primary-500">Phase {phase.id}:</span> {phase.title}
                         </h3>
                         <span className="badge badge-primary">{phase.duration}</span>
                       </div>
-                      <p className="text-gray-600 mb-4">{phase.description}</p>
+                      <p className="text-gray-600 mb-6">{phase.description}</p>
 
                       {/* Tasks */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
                         {phase.tasks.map((task, i) => (
                           <div key={i} className="flex items-center gap-2 text-sm text-gray-700">
                             <CheckCircle2 className="w-4 h-4 text-success-500 flex-shrink-0" />
@@ -186,7 +186,7 @@ export function WorkflowPage() {
 
         {/* Best Practices Card */}
         <div className="card bg-secondary-50 border border-secondary-200">
-          <h3 className="text-lg font-bold mb-4">🎯 Best Practices for Success</h3>
+          <h3 className="text-lg font-bold mb-6">🎯 Best Practices for Success</h3>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start gap-3">
               <span className="text-secondary-500 font-bold">1.</span>

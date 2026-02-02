@@ -81,7 +81,7 @@ export function StoryboardPage() {
         emoji="🎨"
       />
 
-      <div className="mt-6 space-y-5">
+      <div className="mt-10 space-y-8">
         {/* Shot Types Reference */}
         <div className="card bg-secondary-50 border border-secondary-200">
           <div className="flex items-center gap-2 mb-3">
@@ -101,7 +101,7 @@ export function StoryboardPage() {
         <div className="space-y-4">
           {frames.map((frame) => (
             <div key={frame.id} className="card">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-5">
                 {/* Drag Handle */}
                 <div className="flex-shrink-0 pt-2 cursor-move text-gray-400 hover:text-gray-600">
                   <GripVertical className="w-5 h-5" />
@@ -109,7 +109,7 @@ export function StoryboardPage() {
 
                 {/* Image Area */}
                 <div className="w-40 flex-shrink-0">
-                  <div className="aspect-video bg-gray-100 rounded-xl overflow-hidden relative group">
+                  <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden relative group">
                     {frame.imageUrl ? (
                       <img src={frame.imageUrl} alt={`Scene ${frame.sceneNumber}`} className="w-full h-full object-cover" />
                     ) : (
@@ -139,7 +139,7 @@ export function StoryboardPage() {
 
                 {/* Content */}
                 <div className="flex-1 space-y-3">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-5">
                     <span className="badge badge-primary">Scene {frame.sceneNumber}</span>
                     <select
                       value={frame.shotType}
@@ -183,7 +183,7 @@ export function StoryboardPage() {
         {/* Add Frame Button */}
         <button
           onClick={addFrame}
-          className="w-full py-4 border-2 border-dashed border-gray-300 rounded-xl text-gray-500 hover:border-primary-400 hover:text-primary-600 hover:bg-primary-50 transition-all flex items-center justify-center gap-2"
+          className="w-full py-4 border-2 border-dashed border-gray-300 rounded-2xl text-gray-500 hover:border-primary-400 hover:text-primary-600 hover:bg-primary-50 transition-all flex items-center justify-center gap-2"
         >
           <Plus className="w-5 h-5" />
           Add Frame

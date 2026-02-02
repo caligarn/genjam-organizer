@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Clock, Lightbulb } from 'lucide-react';
+import { Clock, Info, Lightbulb } from 'lucide-react';
 
 interface EventTimerProps {
   currentStep: number;
@@ -87,11 +87,11 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
   const instruction = STEP_INSTRUCTIONS[currentStep] || STEP_INSTRUCTIONS[1];
 
   return (
-    <div className={cn('space-y-5', className)}>
+    <div className={cn('space-y-8', className)}>
       {/* Countdown Timer Card */}
       <div
         className={cn(
-          'rounded-2xl p-6 sm:p-8 text-white text-center transition-all duration-500 shadow-xl',
+          'rounded-3xl p-8 sm:p-10 text-white text-center transition-all duration-500 shadow-xl',
           isExpired
             ? 'bg-gradient-to-br from-gray-600 to-gray-700'
             : isWarning
@@ -99,24 +99,24 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
             : 'bg-gradient-hero'
         )}
       >
-        <div className="flex items-center justify-center gap-2 mb-4">
+        <div className="flex items-center justify-center gap-2 mb-6">
           <Clock className="w-5 h-5 opacity-90" />
           <span className="text-sm font-semibold uppercase tracking-widest opacity-90">
             {isExpired ? "Time's Up!" : 'Event Deadline'}
           </span>
         </div>
 
-        <div className="flex items-center justify-center gap-4 sm:gap-6">
+        <div className="flex items-center justify-center gap-6 sm:gap-8">
           <div className="flex flex-col items-center">
             <span className="countdown-digit">{formatNumber(timeLeft.hours)}</span>
             <span className="countdown-label">Hours</span>
           </div>
-          <span className="text-3xl sm:text-4xl font-light opacity-40 -mt-4">:</span>
+          <span className="text-4xl sm:text-5xl font-light opacity-40 -mt-6">:</span>
           <div className="flex flex-col items-center">
             <span className="countdown-digit">{formatNumber(timeLeft.minutes)}</span>
             <span className="countdown-label">Minutes</span>
           </div>
-          <span className="text-3xl sm:text-4xl font-light opacity-40 -mt-4">:</span>
+          <span className="text-4xl sm:text-5xl font-light opacity-40 -mt-6">:</span>
           <div className="flex flex-col items-center">
             <span className="countdown-digit">{formatNumber(timeLeft.seconds)}</span>
             <span className="countdown-label">Seconds</span>
@@ -124,20 +124,27 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
         </div>
 
         {isWarning && !isExpired && (
-          <p className="mt-4 text-sm font-semibold animate-pulse bg-white/20 rounded-full px-4 py-2 inline-block">
+          <p className="mt-6 text-sm font-semibold animate-pulse bg-white/20 rounded-full px-6 py-2 inline-block">
             ⚠️ Less than 30 minutes remaining!
           </p>
         )}
       </div>
 
       {/* Contextual Instructions Card */}
-      <div className="bg-white rounded-2xl p-5 sm:p-6 border border-gray-100 shadow-sm">
-        <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-3">
-          {instruction.current}
-        </p>
-        <div className="flex items-center gap-2 text-sm sm:text-base text-primary-600 font-medium">
-          <Lightbulb className="w-4 h-4 flex-shrink-0" />
-          <span>{instruction.next}</span>
+      <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm">
+        <div className="flex gap-4">
+          <div className="flex-shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-gray-100 flex items-center justify-center">
+              <Info className="w-6 h-6 text-gray-600" />
+            </div>
+          </div>
+          <div className="flex-1 space-y-3">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{instruction.current}</p>
+            <p className="text-sm sm:text-base text-primary-600 font-medium flex items-center gap-2">
+              <Lightbulb className="w-4 h-4 flex-shrink-0" />
+              <span>{instruction.next}</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>

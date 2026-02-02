@@ -45,7 +45,7 @@ export function RegistrationPage() {
         emoji="🎬"
       />
 
-      <div className="mt-10 sm:mt-12 space-y-20">
+      <div className="space-y-6 sm:space-y-8">
         {/* Registration Form Card */}
         <div className="card">
           <div className="space-y-6">

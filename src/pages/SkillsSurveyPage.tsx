@@ -108,7 +108,7 @@ export function SkillsSurveyPage() {
         emoji="🎯"
       />
 
-      <div className="mt-10 sm:mt-12 space-y-20">
+      <div className="space-y-6 sm:space-y-8">
         {/* Skills Grid */}
         <div className="card">
           <h2 className="text-xl font-bold mb-6">Your Creative Skills</h2>

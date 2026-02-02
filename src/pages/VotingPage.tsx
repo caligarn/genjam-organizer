@@ -149,7 +149,7 @@ export function VotingPage() {
         emoji="🏆"
       />
 
-      <div className="mt-10 sm:mt-12 space-y-20">
+      <div className="space-y-6 sm:space-y-8">
         {/* Category Tabs */}
         <div className="flex gap-2 overflow-x-auto pb-2">
           {CATEGORIES.map((category) => {

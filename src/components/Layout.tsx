@@ -41,7 +41,7 @@ export function Layout({
     <div className="min-h-screen flex flex-col">
       {/* Main Content */}
       <main className="flex-1 flex justify-center">
-        <div className={cn('w-full max-w-4xl px-6 sm:px-8 lg:px-12 py-8 sm:py-10', className)}>
+        <div className={cn('w-full max-w-4xl px-6 sm:px-8 lg:px-12 py-10 sm:py-12', className)}>
           {/* Page Header */}
           {title && (
             <GenJamHeader
@@ -49,13 +49,13 @@ export function Layout({
               subtitle={subtitle}
               currentStep={currentStep}
               emoji={emoji}
-              className="mb-8"
+              className="mb-10"
             />
           )}
 
           {/* Timer and Instructions */}
           {showTimer && (
-            <EventTimer currentStep={currentStep} className="mb-6" />
+            <EventTimer currentStep={currentStep} className="mb-8" />
           )}
 
           {/* Step Progress Bar */}
@@ -69,7 +69,7 @@ export function Layout({
             nextLabel={nextLabel}
             nextDisabled={nextDisabled}
             onNext={onNext}
-            className="mb-10"
+            className="mb-12"
           />
 
           {/* Page Content */}

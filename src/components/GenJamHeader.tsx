@@ -18,7 +18,7 @@ export function GenJamHeader({
   className,
 }: GenJamHeaderProps) {
   return (
-    <div className={cn('text-center space-y-3 py-2', className)}>
+    <div className={cn('text-center space-y-4 py-4', className)}>
       {/* Emoji Icon */}
       {emoji && (
         <div className="text-6xl sm:text-7xl">{emoji}</div>

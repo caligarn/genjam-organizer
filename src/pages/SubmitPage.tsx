@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Layout, GenJamHeader } from '@/components';
+import { Layout } from '@/components';
 import { cn } from '@/lib/utils';
 import { Upload, Film, Users, FileVideo, X, Check, AlertCircle } from 'lucide-react';
 
@@ -117,6 +117,9 @@ export function SubmitPage() {
   return (
     <Layout
       currentStep={9}
+      title="Submit Your Final Work"
+      subtitle="Upload your completed film and share your creative journey"
+      emoji="🎥"
       backTo="/storyboard"
       backLabel="Back to Storyboard"
       nextTo="/voting"
@@ -124,14 +127,7 @@ export function SubmitPage() {
       nextDisabled={!isFormValid()}
       onNext={handleSubmit}
     >
-      <GenJamHeader
-        title="Submit Your Final Work"
-        subtitle="Upload your completed film and share your creative journey"
-        currentStep={9}
-        emoji="🎥"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="space-y-8">
         {/* Upload Section */}
         <div className="card">
           <h2 className="text-xl font-bold mb-6 flex items-center gap-2">

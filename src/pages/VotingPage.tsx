@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Layout, GenJamHeader } from '@/components';
+import { Layout } from '@/components';
 import { cn } from '@/lib/utils';
 import { Trophy, Eye, Zap, Check, Clock, Play, PartyPopper } from 'lucide-react';
 
@@ -135,6 +135,9 @@ export function VotingPage() {
   return (
     <Layout
       currentStep={10}
+      title="Vote for Your Favorites"
+      subtitle="Select 3 films in each category to cast your votes"
+      emoji="🏆"
       backTo="/submit"
       backLabel="Back to Submit"
       nextTo="#"
@@ -142,14 +145,7 @@ export function VotingPage() {
       nextDisabled={!isComplete()}
       onNext={handleSubmit}
     >
-      <GenJamHeader
-        title="Vote for Your Favorites"
-        subtitle="Select 3 films in each category to cast your votes"
-        currentStep={10}
-        emoji="🏆"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="space-y-8">
         {/* Category Tabs */}
         <div className="flex gap-2 overflow-x-auto pb-2">
           {CATEGORIES.map((category) => {

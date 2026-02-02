@@ -123,15 +123,16 @@ export function SubmitPage() {
       nextLabel="Submit & Continue to Voting"
       nextDisabled={!isFormValid()}
       onNext={handleSubmit}
+      header={
+        <GenJamHeader
+          title="Submit Your Final Work"
+          subtitle="Upload your completed film and share your creative journey"
+          currentStep={9}
+          emoji="🎥"
+        />
+      }
     >
-      <GenJamHeader
-        title="Submit Your Final Work"
-        subtitle="Upload your completed film and share your creative journey"
-        currentStep={9}
-        emoji="🎥"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10">
         {/* Upload Section */}
         <div className="card">
           <h2 className="text-xl font-bold mb-6 flex items-center gap-2">

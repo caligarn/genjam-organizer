@@ -99,16 +99,16 @@ export function SkillsSurveyPage() {
       nextTo="/icebreaker"
       nextLabel="Continue to Icebreaker"
       onNext={handleSubmit}
+      header={
+        <GenJamHeader
+          title="Skills Survey"
+          subtitle="Help us understand your creative background so we can form balanced teams."
+          currentStep={2}
+          emoji="🎯"
+        />
+      }
     >
-      {/* Header */}
-      <GenJamHeader
-        title="Skills Survey"
-        subtitle="Help us understand your creative background so we can form balanced teams."
-        currentStep={2}
-        emoji="🎯"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10">
         {/* Skills Grid */}
         <div className="card">
           <h2 className="text-xl font-bold mb-6">Your Creative Skills</h2>

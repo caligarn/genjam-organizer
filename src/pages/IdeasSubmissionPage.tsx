@@ -97,15 +97,16 @@ export function IdeasSubmissionPage() {
       nextTo="/workflow"
       nextLabel="Continue to Workflow"
       onNext={() => navigate('/workflow')}
+      header={
+        <GenJamHeader
+          title="Idea Submission & Voting"
+          subtitle="Share your creative vision and vote for your top 3 favorite ideas"
+          currentStep={4}
+          emoji="💡"
+        />
+      }
     >
-      <GenJamHeader
-        title="Idea Submission & Voting"
-        subtitle="Share your creative vision and vote for your top 3 favorite ideas"
-        currentStep={4}
-        emoji="💡"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10">
         {/* Today's Theme */}
         <div className="card bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200">
           <div className="flex items-start gap-5">

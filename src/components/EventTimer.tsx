@@ -87,7 +87,7 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
   const instruction = STEP_INSTRUCTIONS[currentStep] || STEP_INSTRUCTIONS[1];
 
   return (
-    <div className={cn('space-y-8', className)}>
+    <div className={cn('flex flex-col gap-5 sm:gap-7', className)}>
       {/* Countdown Timer Card - Machine Cinema style */}
       <div
         className={cn(

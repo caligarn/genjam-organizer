@@ -36,16 +36,16 @@ export function RegistrationPage() {
       nextTo="/skills-survey"
       nextLabel="Continue to Skills Survey"
       onNext={handleSubmit}
+      header={
+        <GenJamHeader
+          title="Welcome to GenJam 2025!"
+          subtitle="Let's get you registered for today's creative event"
+          currentStep={1}
+          emoji="🎬"
+        />
+      }
     >
-      {/* Header */}
-      <GenJamHeader
-        title="Welcome to GenJam 2025!"
-        subtitle="Let's get you registered for today's creative event"
-        currentStep={1}
-        emoji="🎬"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10">
         {/* Registration Form Card */}
         <div className="card">
           <div className="space-y-6">

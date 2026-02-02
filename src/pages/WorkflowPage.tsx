@@ -99,15 +99,16 @@ export function WorkflowPage() {
       nextTo="/cheatsheet"
       nextLabel="Continue to Cheat Sheet"
       onNext={() => navigate('/cheatsheet')}
+      header={
+        <GenJamHeader
+          title="Production Workflow"
+          subtitle="Your roadmap to creating an amazing AI film in 6 hours"
+          currentStep={5}
+          emoji="📋"
+        />
+      }
     >
-      <GenJamHeader
-        title="Production Workflow"
-        subtitle="Your roadmap to creating an amazing AI film in 6 hours"
-        currentStep={5}
-        emoji="📋"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10">
         {/* Total Time Summary */}
         <div className="card bg-gradient-hero text-white">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">

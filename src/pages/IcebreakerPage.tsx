@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Layout, GenJamHeader } from '@/components';
+import { Layout } from '@/components';
 import { cn } from '@/lib/utils';
 import { MessageSquare, Heart, Send, RefreshCw, Lightbulb } from 'lucide-react';
 
@@ -88,20 +88,16 @@ export function IcebreakerPage() {
   return (
     <Layout
       currentStep={3}
+      title="Icebreaker Challenge"
+      subtitle="Let's have some fun and get to know each other!"
+      emoji="🎮"
       backTo="/skills-survey"
       backLabel="Back to Skills Survey"
       nextTo="/ideas-submission"
       nextLabel="Continue to Ideas"
       onNext={() => navigate('/ideas-submission')}
     >
-      <GenJamHeader
-        title="Icebreaker Challenge"
-        subtitle="Let's have some fun and get to know each other!"
-        currentStep={3}
-        emoji="🎮"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="space-y-8">
         {/* Prompt Card */}
         <div className="card bg-gradient-hero text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent)]" />

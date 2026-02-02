@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Layout, GenJamHeader } from '@/components';
+import { Layout } from '@/components';
 import { User, Mail, Instagram, Linkedin, Wifi, Clock, AlertTriangle } from 'lucide-react';
 
 interface FormData {
@@ -33,19 +33,14 @@ export function RegistrationPage() {
   return (
     <Layout
       currentStep={1}
+      title="Welcome to GenJam 2025!"
+      subtitle="Let's get you registered for today's creative event"
+      emoji="🎬"
       nextTo="/skills-survey"
       nextLabel="Continue to Skills Survey"
       onNext={handleSubmit}
     >
-      {/* Header */}
-      <GenJamHeader
-        title="Welcome to GenJam 2025!"
-        subtitle="Let's get you registered for today's creative event"
-        currentStep={1}
-        emoji="🎬"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="space-y-8">
         {/* Registration Form Card */}
         <div className="card">
           <div className="space-y-6">

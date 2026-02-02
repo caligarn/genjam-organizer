@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Layout, GenJamHeader } from '@/components';
+import { Layout } from '@/components';
 import { cn } from '@/lib/utils';
 import { Play, Trophy, Eye, Zap, X, Clock } from 'lucide-react';
 
@@ -101,20 +101,16 @@ export function ExamplesPage() {
   return (
     <Layout
       currentStep={7}
+      title="Inspiration Gallery"
+      subtitle="Learn from past GenJam winners and standout submissions"
+      emoji="🎬"
       backTo="/cheatsheet"
       backLabel="Back to Cheat Sheet"
       nextTo="/storyboard"
       nextLabel="Continue to Storyboard"
       onNext={() => navigate('/storyboard')}
     >
-      <GenJamHeader
-        title="Inspiration Gallery"
-        subtitle="Learn from past GenJam winners and standout submissions"
-        currentStep={7}
-        emoji="🎬"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="space-y-8">
         {/* Tips Card */}
         <div className="card bg-secondary-50 border border-secondary-200">
           <h3 className="font-bold mb-6">🎯 What to Look For</h3>

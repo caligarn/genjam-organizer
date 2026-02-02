@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Layout, GenJamHeader } from '@/components';
+import { Layout } from '@/components';
 import { cn } from '@/lib/utils';
 import { Lightbulb, Heart, Send, Sparkles, Users } from 'lucide-react';
 
@@ -92,20 +92,16 @@ export function IdeasSubmissionPage() {
   return (
     <Layout
       currentStep={4}
+      title="Idea Submission & Voting"
+      subtitle="Share your creative vision and vote for your top 3 favorite ideas"
+      emoji="💡"
       backTo="/icebreaker"
       backLabel="Back to Icebreaker"
       nextTo="/workflow"
       nextLabel="Continue to Workflow"
       onNext={() => navigate('/workflow')}
     >
-      <GenJamHeader
-        title="Idea Submission & Voting"
-        subtitle="Share your creative vision and vote for your top 3 favorite ideas"
-        currentStep={4}
-        emoji="💡"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="space-y-8">
         {/* Today's Theme */}
         <div className="card bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200">
           <div className="flex items-start gap-5">

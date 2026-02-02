@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Layout, GenJamHeader } from '@/components';
+import { Layout } from '@/components';
 import { cn } from '@/lib/utils';
 import { Users, FileText, Palette, Film, Music, Upload, Eye, Vote, Clock, CheckCircle2 } from 'lucide-react';
 
@@ -94,20 +94,16 @@ export function WorkflowPage() {
   return (
     <Layout
       currentStep={5}
+      title="Production Workflow"
+      subtitle="Your roadmap to creating an amazing AI film in 6 hours"
+      emoji="📋"
       backTo="/ideas-submission"
       backLabel="Back to Ideas"
       nextTo="/cheatsheet"
       nextLabel="Continue to Cheat Sheet"
       onNext={() => navigate('/cheatsheet')}
     >
-      <GenJamHeader
-        title="Production Workflow"
-        subtitle="Your roadmap to creating an amazing AI film in 6 hours"
-        currentStep={5}
-        emoji="📋"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="space-y-8">
         {/* Total Time Summary */}
         <div className="card bg-gradient-hero text-white">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">

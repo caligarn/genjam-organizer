@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Layout, GenJamHeader } from '@/components';
+import { Layout } from '@/components';
 import { cn } from '@/lib/utils';
 import { Plus, Trash2, GripVertical, Image, Wand2, Save, Camera } from 'lucide-react';
 
@@ -68,20 +68,16 @@ export function StoryboardPage() {
   return (
     <Layout
       currentStep={8}
+      title="Storyboard Workspace"
+      subtitle="Visualize your film before production begins"
+      emoji="🎨"
       backTo="/examples"
       backLabel="Back to Examples"
       nextTo="/submit"
       nextLabel="Continue to Submit"
       onNext={() => navigate('/submit')}
     >
-      <GenJamHeader
-        title="Storyboard Workspace"
-        subtitle="Visualize your film before production begins"
-        currentStep={8}
-        emoji="🎨"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="space-y-8">
         {/* Shot Types Reference */}
         <div className="card bg-secondary-50 border border-secondary-200">
           <div className="flex items-center gap-2 mb-6">

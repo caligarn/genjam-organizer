@@ -1,4 +1,4 @@
-import { Layout, GenJamHeader } from '@/components';
+import { Layout } from '@/components';
 import { PartyPopper, Trophy, Eye, Zap, Calendar, MessageCircle, Instagram, Twitter, Youtube, Users, Film, Vote, ExternalLink, Heart, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -32,10 +32,8 @@ export function FollowupPage() {
   };
 
   return (
-    <Layout currentStep={11} backTo="/voting" backLabel="Back to Voting" showTimer={false}>
-      <GenJamHeader title="Thank You for Participating!" subtitle="Stay connected with the Machine Cinema community" currentStep={11} emoji="🎉" />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+    <Layout currentStep={11} title="Thank You for Participating!" subtitle="Stay connected with the Machine Cinema community" emoji="🎉" backTo="/voting" backLabel="Back to Voting" showTimer={false}>
+      <div className="space-y-8">
         {/* Celebration Banner */}
         <div className="card bg-gradient-hero text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.15),transparent)]" />

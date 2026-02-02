@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Layout, GenJamHeader } from '@/components';
+import { Layout } from '@/components';
 import { cn } from '@/lib/utils';
 import { Pen, Image, Video, Volume2, Music, ExternalLink, Copy, Check, Sparkles } from 'lucide-react';
 import { useState } from 'react';
@@ -165,20 +165,16 @@ export function CheatSheetPage() {
   return (
     <Layout
       currentStep={6}
+      title="GenJam Cheat Sheet"
+      subtitle="Essential tools and resources for your creative journey"
+      emoji="🛠️"
       backTo="/workflow"
       backLabel="Back to Workflow"
       nextTo="/examples"
       nextLabel="Continue to Examples"
       onNext={() => navigate('/examples')}
     >
-      <GenJamHeader
-        title="GenJam Cheat Sheet"
-        subtitle="Essential tools and resources for your creative journey"
-        currentStep={6}
-        emoji="🛠️"
-      />
-
-      <div className="mt-10 sm:mt-12 space-y-8">
+      <div className="space-y-8">
         {/* Sponsors */}
         <div className="card">
           <div className="flex items-center gap-2 mb-6">

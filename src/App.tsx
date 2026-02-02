@@ -10,7 +10,6 @@ import {
   StoryboardPage,
   SubmitPage,
   VotingPage,
-  FollowupPage,
 } from './pages';
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
         <Route path="/storyboard" element={<StoryboardPage />} />
         <Route path="/submit" element={<SubmitPage />} />
         <Route path="/voting" element={<VotingPage />} />
-        <Route path="/followup" element={<FollowupPage />} />
       </Routes>
     </BrowserRouter>
   );

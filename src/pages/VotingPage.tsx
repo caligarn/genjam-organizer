@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Layout, GenJamHeader } from '@/components';
 import { cn } from '@/lib/utils';
-import { Trophy, Eye, Zap, Check, Clock, Play } from 'lucide-react';
+import { Trophy, Eye, Zap, Check, Clock, Play, PartyPopper } from 'lucide-react';
 
 interface Submission {
   id: number;
@@ -58,13 +57,13 @@ const CATEGORIES = [
 type CategoryId = typeof CATEGORIES[number]['id'];
 
 export function VotingPage() {
-  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState<CategoryId>('overall');
   const [votes, setVotes] = useState<CategoryVotes>({
     overall: [],
     visuals: [],
     wtf: [],
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const toggleVote = (submissionId: number) => {
     setVotes((prev) => {
@@ -82,6 +81,14 @@ export function VotingPage() {
     return votes.overall.length === 3 && votes.visuals.length === 3 && votes.wtf.length === 3;
   };
 
+  const handleSubmit = () => {
+    if (isComplete()) {
+      // TODO: Submit votes to backend
+      console.log('Votes submitted:', votes);
+      setSubmitted(true);
+    }
+  };
+
   const getCategoryColor = (color: string) => {
     const colors = {
       amber: { bg: 'bg-amber-500', light: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-700', ring: 'ring-amber-400' },
@@ -93,15 +100,47 @@ export function VotingPage() {
 
   const activeColors = getCategoryColor(CATEGORIES.find((c) => c.id === activeCategory)!.color);
 
+  if (submitted) {
+    return (
+      <Layout currentStep={10} backTo="/submit" backLabel="Back">
+        <div className="text-center py-12">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-100 mb-6">
+            <PartyPopper className="w-10 h-10 text-primary-600" />
+          </div>
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            🎉 Thank You for Participating!
+          </h1>
+          <p className="text-lg text-gray-600 max-w-md mx-auto mb-8">
+            Your votes have been submitted successfully. Thank you for being part of GenJam 2025!
+          </p>
+          <div className="card max-w-md mx-auto">
+            <h3 className="font-bold mb-4">Stay Connected</h3>
+            <p className="text-sm text-gray-600 mb-4">
+              Follow Machine Cinema for future events and community updates.
+            </p>
+            <a
+              href="https://machinecinema.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary w-full"
+            >
+              Visit Machine Cinema
+            </a>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+
   return (
     <Layout
       currentStep={10}
       backTo="/submit"
       backLabel="Back to Submit"
-      nextTo="/followup"
+      nextTo="#"
       nextLabel="Submit All Votes"
       nextDisabled={!isComplete()}
-      onNext={() => navigate('/followup')}
+      onNext={handleSubmit}
     >
       <GenJamHeader
         title="Vote for Your Favorites"
@@ -110,7 +149,7 @@ export function VotingPage() {
         emoji="🏆"
       />
 
-      <div className="mt-6 space-y-5">
+      <div className="mt-8 space-y-6">
         {/* Category Tabs */}
         <div className="flex gap-2 overflow-x-auto pb-2">
           {CATEGORIES.map((category) => {
@@ -151,7 +190,7 @@ export function VotingPage() {
         </div>
 
         {/* Submissions Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {SUBMISSIONS.map((submission) => {
             const isSelected = votes[activeCategory].includes(submission.id);
             const canSelect = votes[activeCategory].length < 3;
@@ -197,7 +236,7 @@ export function VotingPage() {
                 </div>
 
                 {/* Info */}
-                <div className="p-2 bg-white">
+                <div className="p-3 bg-white">
                   <h4 className="font-medium text-sm truncate">{submission.title}</h4>
                   <p className="text-xs text-gray-500 truncate">{submission.team}</p>
                 </div>
@@ -209,7 +248,7 @@ export function VotingPage() {
         {/* Vote Status */}
         <div className="card">
           <h3 className="font-bold mb-4">Vote Summary</h3>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid gap-4">
             {CATEGORIES.map((category) => {
               const colors = getCategoryColor(category.color);
               const voteCount = votes[category.id].length;

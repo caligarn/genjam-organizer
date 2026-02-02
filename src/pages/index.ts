@@ -8,4 +8,3 @@ export { ExamplesPage } from './ExamplesPage';
 export { StoryboardPage } from './StoryboardPage';
 export { SubmitPage } from './SubmitPage';
 export { VotingPage } from './VotingPage';
-export { FollowupPage } from './FollowupPage';

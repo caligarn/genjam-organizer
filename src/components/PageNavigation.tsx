@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface PageNavigationProps {
   backTo?: string | null;
@@ -24,7 +24,7 @@ export function PageNavigation({
   const NextContent = (
     <>
       {nextLabel}
-      <ArrowRight className="w-4 h-4" />
+      <ChevronRight className="w-5 h-5" />
     </>
   );
 
@@ -36,8 +36,8 @@ export function PageNavigation({
           to={backTo}
           className="btn btn-ghost text-gray-600 hover:text-primary-600"
         >
-          <ArrowLeft className="w-4 h-4" />
-          {backLabel}
+          <ChevronLeft className="w-5 h-5" />
+          <span className="hidden sm:inline">{backLabel}</span>
         </Link>
       ) : (
         <div /> // Spacer

@@ -37,17 +37,17 @@ export function Layout({
       <main className="flex-1 flex justify-center">
         <div className={cn('w-full max-w-4xl px-6 sm:px-8 lg:px-12 py-8 sm:py-10', className)}>
           {/* Header with Logo */}
-          <div className="flex justify-center mb-6 sm:mb-8">
+          <div className="flex justify-center mb-8 sm:mb-10">
             <Logo size="lg" />
           </div>
 
           {/* Timer and Instructions */}
           {showTimer && (
-            <EventTimer currentStep={currentStep} className="mb-6 sm:mb-8" />
+            <EventTimer currentStep={currentStep} className="mb-8 sm:mb-10" />
           )}
 
           {/* Step Progress Bar */}
-          <StepProgressBar currentStep={currentStep} className="mb-6 sm:mb-8" />
+          <StepProgressBar currentStep={currentStep} className="mb-8 sm:mb-10" />
 
           {/* Navigation Button - positioned before content */}
           <PageNavigation

@@ -103,7 +103,7 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
           boxShadow: isExpired ? 'none' : '6px 6px 0 #FFD700'
         }}
       >
-        <div className="flex items-center justify-center gap-2 mb-6">
+        <div className="flex items-center justify-center gap-2 mb-8">
           <Clock className="w-5 h-5 opacity-90" />
           <span className="text-sm font-bold uppercase tracking-widest opacity-90">
             {isExpired ? "Time's Up!" : 'Event Deadline'}

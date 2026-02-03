@@ -178,14 +178,14 @@ export function CheatSheetPage() {
         emoji="🛠️"
       />
 
-      <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-8 sm:space-y-10">
         {/* Sponsors */}
         <div className="card">
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex items-center gap-2 mb-8">
             <Sparkles className="w-5 h-5 text-primary-500" />
             <h2 className="text-xl font-bold">Today's Sponsors</h2>
           </div>
-          <p className="text-gray-600 mb-6">Thank you to our amazing sponsors for making this event possible!</p>
+          <p className="text-gray-600 mb-8">Thank you to our amazing sponsors for making this event possible!</p>
           <div className="flex justify-center gap-8 flex-wrap">
             {SPONSORS.map((sponsor) => (
               <div key={sponsor.name} className="flex flex-col items-center gap-2">
@@ -208,7 +208,7 @@ export function CheatSheetPage() {
               <h2 className="text-xl font-bold">{category.name}</h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-5">
+            <div className="grid md:grid-cols-2 gap-8">
               {category.tools.map((tool) => (
                 <div key={tool.name} className="card">
                   <div className="flex items-start justify-between mb-3">

@@ -131,10 +131,10 @@ export function SubmitPage() {
         emoji="🎥"
       />
 
-      <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-8 sm:space-y-10">
         {/* Upload Section */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
+          <h2 className="text-xl font-bold mb-8 flex items-center gap-2">
             <Upload className="w-5 h-5 text-primary-500" />
             Video Upload
           </h2>
@@ -143,11 +143,11 @@ export function SubmitPage() {
             <label
               className="block border-2 border-dashed border-gray-300 rounded-2xl p-10 text-center cursor-pointer hover:border-primary-400 hover:bg-primary-50 transition-all"
             >
-              <FileVideo className="w-12 h-12 text-gray-400 mx-auto mb-6" />
+              <FileVideo className="w-12 h-12 text-gray-400 mx-auto mb-8" />
               <p className="text-lg font-medium text-gray-700 mb-3">
                 Drag and drop your video here
               </p>
-              <p className="text-sm text-gray-500 mb-6">
+              <p className="text-sm text-gray-500 mb-8">
                 or click to browse
               </p>
               <p className="text-xs text-gray-400">
@@ -162,8 +162,8 @@ export function SubmitPage() {
               />
             </label>
           ) : (
-            <div className="border-2 border-primary-200 bg-primary-50 rounded-2xl p-5">
-              <div className="flex items-center gap-5">
+            <div className="border-2 border-primary-200 bg-primary-50 rounded-2xl p-6">
+              <div className="flex items-center gap-8">
                 <div className="w-12 h-12 rounded-2xl bg-primary-100 flex items-center justify-center">
                   <Film className="w-6 h-6 text-primary-600" />
                 </div>
@@ -201,7 +201,7 @@ export function SubmitPage() {
 
         {/* Film Details */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
+          <h2 className="text-xl font-bold mb-8 flex items-center gap-2">
             <Film className="w-5 h-5 text-primary-500" />
             Film Details
           </h2>
@@ -220,7 +220,7 @@ export function SubmitPage() {
               />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-5">
+            <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-3">
                   Team Name <span className="text-red-500">*</span>
@@ -282,7 +282,7 @@ export function SubmitPage() {
 
         {/* Submission Checklist */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
+          <h2 className="text-xl font-bold mb-8 flex items-center gap-2">
             <AlertCircle className="w-5 h-5 text-primary-500" />
             Submission Checklist
           </h2>

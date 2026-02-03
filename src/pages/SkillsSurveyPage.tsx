@@ -108,15 +108,15 @@ export function SkillsSurveyPage() {
         emoji="🎯"
       />
 
-      <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-8 sm:space-y-10">
         {/* Skills Grid */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-6">Your Creative Skills</h2>
+          <h2 className="text-xl font-bold mb-8">Your Creative Skills</h2>
           <p className="text-gray-600 mb-8">
             Select the skills you have and rate your experience level. Click a skill to select it.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {SKILLS.map((skill) => {
               const isSelected = selectedSkills[skill.id] !== undefined;
               const level = selectedSkills[skill.id];
@@ -125,7 +125,7 @@ export function SkillsSurveyPage() {
                 <div
                   key={skill.id}
                   className={cn(
-                    'rounded-2xl border-2 p-5 transition-all duration-200 cursor-pointer',
+                    'rounded-2xl border-2 p-6 transition-all duration-200 cursor-pointer',
                     isSelected
                       ? 'border-primary-400 bg-primary-50'
                       : 'border-gray-200 bg-white hover:border-primary-200 hover:bg-primary-50/50'
@@ -184,8 +184,8 @@ export function SkillsSurveyPage() {
 
         {/* Preferred Role */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-6">Preferred Role</h2>
-          <p className="text-gray-600 mb-6">
+          <h2 className="text-xl font-bold mb-8">Preferred Role</h2>
+          <p className="text-gray-600 mb-8">
             What role do you prefer to take in a creative project?
           </p>
 
@@ -209,8 +209,8 @@ export function SkillsSurveyPage() {
 
         {/* What are you excited to learn */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-6">What Are You Excited to Learn?</h2>
-          <p className="text-gray-600 mb-6">
+          <h2 className="text-xl font-bold mb-8">What Are You Excited to Learn?</h2>
+          <p className="text-gray-600 mb-8">
             Tell us what you're hoping to explore or improve during this GenJam.
           </p>
 

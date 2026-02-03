@@ -107,7 +107,7 @@ export function WorkflowPage() {
         emoji="📋"
       />
 
-      <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-8 sm:space-y-10">
         {/* Total Time Summary */}
         <div className="card bg-gradient-hero text-white">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
@@ -153,10 +153,10 @@ export function WorkflowPage() {
                         </h3>
                         <span className="badge badge-primary">{phase.duration}</span>
                       </div>
-                      <p className="text-gray-600 mb-6">{phase.description}</p>
+                      <p className="text-gray-600 mb-8">{phase.description}</p>
 
                       {/* Tasks */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
                         {phase.tasks.map((task, i) => (
                           <div key={i} className="flex items-center gap-2 text-sm text-gray-700">
                             <CheckCircle2 className="w-4 h-4 text-success-500 flex-shrink-0" />
@@ -186,7 +186,7 @@ export function WorkflowPage() {
 
         {/* Best Practices Card */}
         <div className="card bg-secondary-50 border border-secondary-200">
-          <h3 className="text-lg font-bold mb-6">🎯 Best Practices for Success</h3>
+          <h3 className="text-lg font-bold mb-8">🎯 Best Practices for Success</h3>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start gap-3">
               <span className="text-secondary-500 font-bold">1.</span>

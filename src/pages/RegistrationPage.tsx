@@ -45,7 +45,7 @@ export function RegistrationPage() {
         emoji="🎬"
       />
 
-      <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-8 sm:space-y-10">
         {/* Registration Form Card */}
         <div className="card">
           <div className="space-y-6">
@@ -125,13 +125,13 @@ export function RegistrationPage() {
 
         {/* Venue Information Card */}
         <div className="card">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+          <h2 className="text-xl font-bold text-gray-900 mb-8 flex items-center gap-2">
             📍 Venue Information
           </h2>
 
           <div className="space-y-6">
             {/* WiFi Info */}
-            <div className="flex items-start gap-4 p-5 bg-gray-50 rounded-2xl">
+            <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl">
               <Wifi className="w-6 h-6 text-primary-500 mt-0.5 flex-shrink-0" />
               <div className="space-y-2">
                 <div className="flex items-center gap-3">
@@ -146,7 +146,7 @@ export function RegistrationPage() {
             </div>
 
             {/* Important Reminders */}
-            <div className="p-5 bg-amber-50 border border-amber-200 rounded-2xl">
+            <div className="p-6 bg-amber-50 border border-amber-200 rounded-2xl">
               <div className="flex items-start gap-4">
                 <AlertTriangle className="w-6 h-6 text-amber-600 mt-0.5 flex-shrink-0" />
                 <div>

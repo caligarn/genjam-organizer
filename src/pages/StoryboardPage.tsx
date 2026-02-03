@@ -81,10 +81,10 @@ export function StoryboardPage() {
         emoji="🎨"
       />
 
-      <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-8 sm:space-y-10">
         {/* Shot Types Reference */}
         <div className="card bg-secondary-50 border border-secondary-200">
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex items-center gap-2 mb-8">
             <Camera className="w-5 h-5 text-secondary-600" />
             <h3 className="font-bold">Quick Shot Reference</h3>
           </div>

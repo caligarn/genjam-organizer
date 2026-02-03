@@ -114,10 +114,10 @@ export function ExamplesPage() {
         emoji="🎬"
       />
 
-      <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-8 sm:space-y-10">
         {/* Tips Card */}
         <div className="card bg-secondary-50 border border-secondary-200">
-          <h3 className="font-bold mb-6">🎯 What to Look For</h3>
+          <h3 className="font-bold mb-8">🎯 What to Look For</h3>
           <ul className="grid md:grid-cols-2 gap-2 text-sm text-gray-700">
             <li>• <strong>Pacing</strong> - How do they maintain interest?</li>
             <li>• <strong>Style</strong> - What visual choices make it unique?</li>
@@ -127,7 +127,7 @@ export function ExamplesPage() {
         </div>
 
         {/* Films Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {EXAMPLE_FILMS.map((film) => (
             <div
               key={film.id}
@@ -171,7 +171,7 @@ export function ExamplesPage() {
               </div>
 
               {/* Info */}
-              <div className="p-5">
+              <div className="p-6">
                 <h3 className="font-bold text-lg mb-1">{film.title}</h3>
                 <p className="text-sm text-gray-500 mb-3">{film.team} • {film.event}</p>
                 <p className="text-sm text-gray-600 line-clamp-2">{film.description}</p>
@@ -183,7 +183,7 @@ export function ExamplesPage() {
 
       {/* Modal */}
       {selectedFilm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-5 bg-black/80" onClick={() => setSelectedFilm(null)}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80" onClick={() => setSelectedFilm(null)}>
           <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             {/* Video placeholder */}
             <div className="aspect-video bg-gray-900 flex items-center justify-center relative">

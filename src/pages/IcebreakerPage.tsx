@@ -101,12 +101,12 @@ export function IcebreakerPage() {
         emoji="🎮"
       />
 
-      <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-8 sm:space-y-10">
         {/* Prompt Card */}
         <div className="card bg-gradient-hero text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent)]" />
           <div className="relative">
-            <div className="flex items-start justify-between gap-5 mb-6">
+            <div className="flex items-start justify-between gap-8 mb-8">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
                   <Lightbulb className="w-6 h-6" />
@@ -131,7 +131,7 @@ export function IcebreakerPage() {
 
         {/* Response Input */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
+          <h2 className="text-xl font-bold mb-8 flex items-center gap-2">
             <MessageSquare className="w-5 h-5 text-primary-500" />
             Your Response
           </h2>
@@ -158,7 +158,7 @@ export function IcebreakerPage() {
               </div>
             </div>
           ) : (
-            <div className="bg-success-400/10 border border-success-500/30 rounded-2xl p-5">
+            <div className="bg-success-400/10 border border-success-500/30 rounded-2xl p-6">
               <p className="text-success-600 font-medium">✓ Response submitted!</p>
             </div>
           )}
@@ -167,10 +167,10 @@ export function IcebreakerPage() {
         {/* Other Responses */}
         <div className="space-y-4">
           <h2 className="text-xl font-bold">Community Responses</h2>
-          <div className="grid gap-5">
+          <div className="grid gap-8">
             {responses.map((response) => (
               <div key={response.id} className={cn('card', response.name === 'You' && 'border-2 border-primary-300')}>
-                <div className="flex items-start gap-5">
+                <div className="flex items-start gap-8">
                   <div className="w-12 h-12 rounded-2xl bg-primary-100 flex items-center justify-center text-2xl">
                     {response.avatar}
                   </div>

@@ -45,10 +45,10 @@ export function RegistrationPage() {
         emoji="🎬"
       />
 
-      <div className="space-y-[10rem] sm:space-y-[13rem]">
+      <div className="space-y-32 sm:space-y-40">
         {/* Registration Form Card */}
         <div className="card">
-          <div className="space-y-[8rem]">
+          <div className="space-y-24">
             {/* Name */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-3">
@@ -125,13 +125,13 @@ export function RegistrationPage() {
 
         {/* Venue Information Card */}
         <div className="card">
-          <h2 className="text-xl font-bold text-gray-900 mb-[10rem] flex items-center gap-2">
+          <h2 className="text-xl font-bold text-gray-900 mb-32 flex items-center gap-2">
             📍 Venue Information
           </h2>
 
-          <div className="space-y-[8rem]">
+          <div className="space-y-24">
             {/* WiFi Info */}
-            <div className="flex items-start gap-[5rem] p-[8rem] bg-gray-50 rounded-2xl">
+            <div className="flex items-start gap-16 p-24 bg-gray-50 rounded-2xl">
               <Wifi className="w-6 h-6 text-primary-500 mt-0.5 flex-shrink-0" />
               <div className="space-y-2">
                 <div className="flex items-center gap-3">
@@ -146,12 +146,12 @@ export function RegistrationPage() {
             </div>
 
             {/* Important Reminders */}
-            <div className="p-[8rem] bg-amber-50 border border-amber-200 rounded-2xl">
-              <div className="flex items-start gap-[5rem]">
+            <div className="p-24 bg-amber-50 border border-amber-200 rounded-2xl">
+              <div className="flex items-start gap-16">
                 <AlertTriangle className="w-6 h-6 text-amber-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-amber-800 mb-[4rem]">Important Reminders:</h3>
-                  <ul className="space-y-[4rem] text-sm text-amber-700">
+                  <h3 className="font-semibold text-amber-800 mb-12">Important Reminders:</h3>
+                  <ul className="space-y-12 text-sm text-amber-700">
                     <li className="flex items-start gap-3">
                       <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <span>Event ends at <strong>11:00 PM</strong> - please wrap up by then</span>

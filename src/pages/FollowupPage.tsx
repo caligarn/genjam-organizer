@@ -35,22 +35,22 @@ export function FollowupPage() {
     <Layout currentStep={11} backTo="/voting" backLabel="Back to Voting" showTimer={false}>
       <GenJamHeader title="Thank You for Participating!" subtitle="Stay connected with the Machine Cinema community" currentStep={11} emoji="🎉" />
 
-      <div className="space-y-[10rem] sm:space-y-[13rem]">
+      <div className="space-y-32 sm:space-y-40">
         {/* Celebration Banner */}
         <div className="card bg-gradient-hero text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.15),transparent)]" />
           <div className="relative">
-            <PartyPopper className="w-12 h-12 mx-auto mb-[4rem]" />
-            <h2 className="text-2xl font-bold mb-[2rem]">Congratulations to All Participants!</h2>
+            <PartyPopper className="w-12 h-12 mx-auto mb-12" />
+            <h2 className="text-2xl font-bold mb-6">Congratulations to All Participants!</h2>
             <p className="opacity-90">You created something amazing in just a few hours. Be proud of what you accomplished!</p>
           </div>
         </div>
 
         {/* Event Stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-[10rem]">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-32">
           {STATS.map((stat) => (
             <div key={stat.label} className="card text-center">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 mx-auto mb-[2rem] sm:mb-[3rem]">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 mx-auto mb-6 sm:mb-8">
                 {stat.icon}
               </div>
               <p className="text-2xl sm:text-3xl font-bold text-gray-900">{stat.value}</p>
@@ -61,22 +61,22 @@ export function FollowupPage() {
 
         {/* Winners */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-[10rem] flex items-center gap-[2rem]">
+          <h2 className="text-xl font-bold mb-32 flex items-center gap-6">
             <Trophy className="w-5 h-5 text-amber-500" />
             Winners Announcement
           </h2>
-          <div className="grid md:grid-cols-3 gap-[10rem]">
+          <div className="grid md:grid-cols-3 gap-32">
             {WINNERS.map((winner) => {
               const colors = getColorClasses(winner.color);
               return (
-                <div key={winner.category} className={cn('rounded-xl p-[4rem] border-2', colors.light, `border-${winner.color}-200`)}>
-                  <div className={cn('w-10 h-10 rounded-xl flex items-center justify-center text-white mb-[3rem]', colors.bg)}>
+                <div key={winner.category} className={cn('rounded-xl p-12 border-2', colors.light, `border-${winner.color}-200`)}>
+                  <div className={cn('w-10 h-10 rounded-xl flex items-center justify-center text-white mb-8', colors.bg)}>
                     {winner.icon}
                   </div>
-                  <p className={cn('text-sm font-medium mb-[1rem]', colors.text)}>{winner.category}</p>
+                  <p className={cn('text-sm font-medium mb-3', colors.text)}>{winner.category}</p>
                   <h3 className="font-bold text-lg">{winner.title}</h3>
                   <p className="text-sm text-gray-500">by {winner.team}</p>
-                  <p className="text-xs text-gray-400 mt-[2rem]">{winner.votes} votes</p>
+                  <p className="text-xs text-gray-400 mt-6">{winner.votes} votes</p>
                 </div>
               );
             })}
@@ -85,14 +85,14 @@ export function FollowupPage() {
 
         {/* Join Community */}
         <div className="card border-2 border-primary-200 bg-primary-50">
-          <div className="flex items-start gap-[4rem]">
+          <div className="flex items-start gap-12">
             <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center text-white flex-shrink-0">
               <Heart className="w-7 h-7" />
             </div>
             <div className="flex-1">
-              <h2 className="text-xl font-bold mb-[2rem]">Join Machine Cinema</h2>
-              <p className="text-gray-600 mb-[4rem]">Stay connected with our global community of AI creators. Get notified about future events, share your work, and collaborate with fellow filmmakers.</p>
-              <div className="flex flex-wrap gap-[3rem]">
+              <h2 className="text-xl font-bold mb-6">Join Machine Cinema</h2>
+              <p className="text-gray-600 mb-12">Stay connected with our global community of AI creators. Get notified about future events, share your work, and collaborate with fellow filmmakers.</p>
+              <div className="flex flex-wrap gap-8">
                 <a href="https://lu.ma/machinecinema" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   <Calendar className="w-4 h-4" />
                   View Upcoming Events
@@ -109,8 +109,8 @@ export function FollowupPage() {
 
         {/* Social Links */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-[10rem]">Follow Us</h2>
-          <div className="flex gap-[4rem]">
+          <h2 className="text-xl font-bold mb-32">Follow Us</h2>
+          <div className="flex gap-12">
             <a href="https://instagram.com/machinecinema" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white hover:scale-110 transition-transform">
               <Instagram className="w-6 h-6" />
             </a>
@@ -121,18 +121,18 @@ export function FollowupPage() {
               <Youtube className="w-6 h-6" />
             </a>
           </div>
-          <p className="text-sm text-gray-500 mt-[4rem]">Share your film with <span className="font-semibold text-primary-600">#GenJam2025</span> and tag <span className="font-semibold text-primary-600">@MachineCinema</span></p>
+          <p className="text-sm text-gray-500 mt-12">Share your film with <span className="font-semibold text-primary-600">#GenJam2025</span> and tag <span className="font-semibold text-primary-600">@MachineCinema</span></p>
         </div>
 
         {/* Sponsors */}
         <div className="card">
-          <div className="flex items-center gap-[2rem] mb-[10rem]">
+          <div className="flex items-center gap-6 mb-32">
             <Sparkles className="w-5 h-5 text-primary-500" />
             <h2 className="text-xl font-bold">Thank You to Our Sponsors</h2>
           </div>
-          <div className="flex justify-center gap-[10rem] flex-wrap">
+          <div className="flex justify-center gap-32 flex-wrap">
             {SPONSORS.map((sponsor) => (
-              <div key={sponsor.name} className="flex flex-col items-center gap-[2rem]">
+              <div key={sponsor.name} className="flex flex-col items-center gap-6">
                 <div className="w-16 h-16 rounded-xl bg-gray-100 flex items-center justify-center text-3xl">{sponsor.logo}</div>
                 <span className="text-sm font-medium text-gray-600">{sponsor.name}</span>
               </div>
@@ -141,8 +141,8 @@ export function FollowupPage() {
         </div>
 
         {/* Final Message */}
-        <div className="text-center py-[10rem]">
-          <p className="text-2xl font-display font-bold text-gradient mb-[2rem]">See you at the next GenJam!</p>
+        <div className="text-center py-32">
+          <p className="text-2xl font-display font-bold text-gradient mb-6">See you at the next GenJam!</p>
           <p className="text-gray-500">Keep creating. Keep experimenting. Keep pushing boundaries.</p>
         </div>
       </div>

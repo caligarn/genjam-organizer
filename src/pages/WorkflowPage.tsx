@@ -107,11 +107,11 @@ export function WorkflowPage() {
         emoji="📋"
       />
 
-      <div className="space-y-[10rem] sm:space-y-[13rem]">
+      <div className="space-y-32 sm:space-y-40">
         {/* Total Time Summary */}
         <div className="card bg-gradient-hero text-white">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-[6rem]">
-            <div className="flex items-center gap-[4rem] sm:gap-[6rem]">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-20">
+            <div className="flex items-center gap-12 sm:gap-20">
               <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-white/20 flex items-center justify-center flex-shrink-0">
                 <Clock className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
@@ -132,7 +132,7 @@ export function WorkflowPage() {
           {/* Vertical line */}
           <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-primary-200 hidden md:block" />
 
-          <div className="space-y-[8rem]">
+          <div className="space-y-24">
             {PHASES.map((phase, index) => (
               <div key={phase.id} className="relative">
                 {/* Timeline dot */}
@@ -142,21 +142,21 @@ export function WorkflowPage() {
 
                 {/* Phase Card */}
                 <div className={cn('card md:ml-20')}>
-                  <div className="flex items-start gap-[6rem]">
+                  <div className="flex items-start gap-20">
                     <div className="md:hidden w-12 h-12 rounded-2xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
                       {phase.icon}
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center justify-between gap-[6rem] mb-[4rem]">
+                      <div className="flex items-center justify-between gap-20 mb-12">
                         <h3 className="text-lg font-bold">
                           <span className="text-primary-500">Phase {phase.id}:</span> {phase.title}
                         </h3>
                         <span className="badge badge-primary">{phase.duration}</span>
                       </div>
-                      <p className="text-gray-600 mb-[10rem]">{phase.description}</p>
+                      <p className="text-gray-600 mb-32">{phase.description}</p>
 
                       {/* Tasks */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-[2.5rem] mb-[10rem]">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-32">
                         {phase.tasks.map((task, i) => (
                           <div key={i} className="flex items-center gap-2 text-sm text-gray-700">
                             <CheckCircle2 className="w-4 h-4 text-success-500 flex-shrink-0" />
@@ -166,7 +166,7 @@ export function WorkflowPage() {
                       </div>
 
                       {/* Tip */}
-                      <div className="bg-amber-50 rounded-lg p-[4rem] border border-amber-200">
+                      <div className="bg-amber-50 rounded-lg p-12 border border-amber-200">
                         <p className="text-sm text-amber-800">
                           <span className="font-semibold">💡 Tip:</span> {phase.tips}
                         </p>
@@ -186,21 +186,21 @@ export function WorkflowPage() {
 
         {/* Best Practices Card */}
         <div className="card bg-secondary-50 border border-secondary-200">
-          <h3 className="text-lg font-bold mb-[10rem]">🎯 Best Practices for Success</h3>
-          <ul className="space-y-[4rem] text-gray-700">
-            <li className="flex items-start gap-[4rem]">
+          <h3 className="text-lg font-bold mb-32">🎯 Best Practices for Success</h3>
+          <ul className="space-y-12 text-gray-700">
+            <li className="flex items-start gap-12">
               <span className="text-secondary-500 font-bold">1.</span>
               <span><strong>Communicate constantly</strong> - Check in with teammates every 30 minutes</span>
             </li>
-            <li className="flex items-start gap-[4rem]">
+            <li className="flex items-start gap-12">
               <span className="text-secondary-500 font-bold">2.</span>
               <span><strong>Embrace imperfection</strong> - Done is better than perfect in a jam!</span>
             </li>
-            <li className="flex items-start gap-[4rem]">
+            <li className="flex items-start gap-12">
               <span className="text-secondary-500 font-bold">3.</span>
               <span><strong>Save frequently</strong> - Don't lose your work to crashes</span>
             </li>
-            <li className="flex items-start gap-[4rem]">
+            <li className="flex items-start gap-12">
               <span className="text-secondary-500 font-bold">4.</span>
               <span><strong>Test early</strong> - Watch rough cuts to catch issues fast</span>
             </li>

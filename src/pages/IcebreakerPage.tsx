@@ -101,13 +101,13 @@ export function IcebreakerPage() {
         emoji="🎮"
       />
 
-      <div className="space-y-[10rem] sm:space-y-[13rem]">
+      <div className="space-y-32 sm:space-y-40">
         {/* Prompt Card */}
         <div className="card bg-gradient-hero text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent)]" />
           <div className="relative">
-            <div className="flex items-start justify-between gap-[10rem] mb-[10rem]">
-              <div className="flex items-center gap-[4rem]">
+            <div className="flex items-start justify-between gap-32 mb-32">
+              <div className="flex items-center gap-12">
                 <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
                   <Lightbulb className="w-6 h-6" />
                 </div>
@@ -131,13 +131,13 @@ export function IcebreakerPage() {
 
         {/* Response Input */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-[10rem] flex items-center gap-[2.5rem]">
+          <h2 className="text-xl font-bold mb-32 flex items-center gap-8">
             <MessageSquare className="w-5 h-5 text-primary-500" />
             Your Response
           </h2>
 
           {!submitted ? (
-            <div className="space-y-[5rem]">
+            <div className="space-y-16">
               <textarea
                 value={userResponse}
                 onChange={(e) => setUserResponse(e.target.value)}
@@ -158,31 +158,31 @@ export function IcebreakerPage() {
               </div>
             </div>
           ) : (
-            <div className="bg-success-400/10 border border-success-500/30 rounded-2xl p-[8rem]">
+            <div className="bg-success-400/10 border border-success-500/30 rounded-2xl p-24">
               <p className="text-success-600 font-medium">✓ Response submitted!</p>
             </div>
           )}
         </div>
 
         {/* Other Responses */}
-        <div className="space-y-[5rem]">
+        <div className="space-y-16">
           <h2 className="text-xl font-bold">Community Responses</h2>
-          <div className="grid gap-[10rem]">
+          <div className="grid gap-32">
             {responses.map((response) => (
               <div key={response.id} className={cn('card', response.name === 'You' && 'border-2 border-primary-300')}>
-                <div className="flex items-start gap-[10rem]">
+                <div className="flex items-start gap-32">
                   <div className="w-12 h-12 rounded-2xl bg-primary-100 flex items-center justify-center text-2xl">
                     {response.avatar}
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-[2.5rem] mb-[4rem]">
+                    <div className="flex items-center gap-8 mb-12">
                       <span className="font-semibold">{response.name}</span>
                       {response.name === 'You' && <span className="badge badge-primary text-xs">You</span>}
                     </div>
                     <p className="text-gray-700">{response.response}</p>
                   </div>
                 </div>
-                <div className="mt-[5rem] flex justify-end">
+                <div className="mt-16 flex justify-end">
                   <button
                     onClick={() => toggleLike(response.id)}
                     className={cn(

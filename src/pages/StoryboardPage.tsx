@@ -81,14 +81,14 @@ export function StoryboardPage() {
         emoji="🎨"
       />
 
-      <div className="space-y-[10rem] sm:space-y-[13rem]">
+      <div className="space-y-32 sm:space-y-40">
         {/* Shot Types Reference */}
         <div className="card bg-secondary-50 border border-secondary-200">
-          <div className="flex items-center gap-2 mb-[10rem]">
+          <div className="flex items-center gap-2 mb-32">
             <Camera className="w-5 h-5 text-secondary-600" />
             <h3 className="font-bold">Quick Shot Reference</h3>
           </div>
-          <div className="flex flex-wrap gap-[2.5rem]">
+          <div className="flex flex-wrap gap-8">
             {SHOT_TYPES.map((type) => (
               <span key={type} className="px-3 py-1 bg-white rounded-full text-sm text-gray-600 border">
                 {type}
@@ -98,10 +98,10 @@ export function StoryboardPage() {
         </div>
 
         {/* Frames */}
-        <div className="space-y-[5rem]">
+        <div className="space-y-16">
           {frames.map((frame) => (
             <div key={frame.id} className="card">
-              <div className="flex items-start gap-[6rem]">
+              <div className="flex items-start gap-20">
                 {/* Drag Handle */}
                 <div className="flex-shrink-0 pt-2 cursor-move text-gray-400 hover:text-gray-600">
                   <GripVertical className="w-5 h-5" />
@@ -138,8 +138,8 @@ export function StoryboardPage() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 space-y-[4rem]">
-                  <div className="flex items-center gap-[6rem]">
+                <div className="flex-1 space-y-12">
+                  <div className="flex items-center gap-20">
                     <span className="badge badge-primary">Scene {frame.sceneNumber}</span>
                     <select
                       value={frame.shotType}

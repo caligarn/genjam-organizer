@@ -96,8 +96,8 @@ export function SkillsSurveyPage() {
       currentStep={2}
       backTo="/"
       backLabel="Back to Registration"
-      nextTo="/icebreaker"
-      nextLabel="Continue to Icebreaker"
+      nextTo="/my-team"
+      nextLabel="Continue to My Team"
       onNext={handleSubmit}
     >
       {/* Header */}

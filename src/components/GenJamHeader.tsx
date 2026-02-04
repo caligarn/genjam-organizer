@@ -13,7 +13,7 @@ export function GenJamHeader({
   title,
   subtitle,
   currentStep,
-  totalSteps = 10,
+  totalSteps = 11,
   emoji,
   className,
 }: GenJamHeaderProps) {

@@ -67,7 +67,7 @@ export function StoryboardPage() {
 
   return (
     <Layout
-      currentStep={8}
+      currentStep={9}
       backTo="/examples"
       backLabel="Back to Examples"
       nextTo="/submit"
@@ -77,7 +77,7 @@ export function StoryboardPage() {
       <GenJamHeader
         title="Storyboard Workspace"
         subtitle="Visualize your film before production begins"
-        currentStep={8}
+        currentStep={9}
         emoji="🎨"
       />
 

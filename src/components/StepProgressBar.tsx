@@ -10,17 +10,18 @@ interface StepProgressBarProps {
 const STEPS = [
   { id: 1, label: 'Registration', shortLabel: 'Reg', path: '/' },
   { id: 2, label: 'Skills', shortLabel: 'Skills', path: '/skills-survey' },
-  { id: 3, label: 'Icebreaker', shortLabel: 'Ice', path: '/icebreaker' },
-  { id: 4, label: 'Ideas', shortLabel: 'Ideas', path: '/ideas-submission' },
-  { id: 5, label: 'Workflow', shortLabel: 'Flow', path: '/workflow' },
-  { id: 6, label: 'Cheat Sheet', shortLabel: 'Tools', path: '/cheatsheet' },
-  { id: 7, label: 'Examples', shortLabel: 'Ex', path: '/examples' },
-  { id: 8, label: 'Storyboard', shortLabel: 'Story', path: '/storyboard' },
-  { id: 9, label: 'Submit', shortLabel: 'Sub', path: '/submit' },
-  { id: 10, label: 'Voting', shortLabel: 'Vote', path: '/voting' },
+  { id: 3, label: 'My Team', shortLabel: 'Team', path: '/my-team' },
+  { id: 4, label: 'Icebreaker', shortLabel: 'Ice', path: '/icebreaker' },
+  { id: 5, label: 'Ideas', shortLabel: 'Ideas', path: '/ideas-submission' },
+  { id: 6, label: 'Workflow', shortLabel: 'Flow', path: '/workflow' },
+  { id: 7, label: 'Cheat Sheet', shortLabel: 'Tools', path: '/cheatsheet' },
+  { id: 8, label: 'Examples', shortLabel: 'Ex', path: '/examples' },
+  { id: 9, label: 'Storyboard', shortLabel: 'Story', path: '/storyboard' },
+  { id: 10, label: 'Submit', shortLabel: 'Sub', path: '/submit' },
+  { id: 11, label: 'Voting', shortLabel: 'Vote', path: '/voting' },
 ];
 
-const TOTAL_STEPS = 10;
+const TOTAL_STEPS = 11;
 
 export function StepProgressBar({ currentStep, className }: StepProgressBarProps) {
   const navigate = useNavigate();

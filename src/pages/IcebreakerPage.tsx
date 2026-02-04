@@ -87,9 +87,9 @@ export function IcebreakerPage() {
 
   return (
     <Layout
-      currentStep={3}
-      backTo="/skills-survey"
-      backLabel="Back to Skills Survey"
+      currentStep={4}
+      backTo="/my-team"
+      backLabel="Back to My Team"
       nextTo="/ideas-submission"
       nextLabel="Continue to Ideas"
       onNext={() => navigate('/ideas-submission')}
@@ -97,7 +97,7 @@ export function IcebreakerPage() {
       <GenJamHeader
         title="Icebreaker Challenge"
         subtitle="Let's have some fun and get to know each other!"
-        currentStep={3}
+        currentStep={4}
         emoji="🎮"
       />
 

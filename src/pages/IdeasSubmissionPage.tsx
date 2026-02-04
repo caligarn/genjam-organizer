@@ -91,7 +91,7 @@ export function IdeasSubmissionPage() {
 
   return (
     <Layout
-      currentStep={4}
+      currentStep={5}
       backTo="/icebreaker"
       backLabel="Back to Icebreaker"
       nextTo="/workflow"
@@ -101,7 +101,7 @@ export function IdeasSubmissionPage() {
       <GenJamHeader
         title="Idea Submission & Voting"
         subtitle="Share your creative vision and vote for your top 3 favorite ideas"
-        currentStep={4}
+        currentStep={5}
         emoji="💡"
       />
 

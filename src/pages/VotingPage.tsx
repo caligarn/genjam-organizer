@@ -102,7 +102,7 @@ export function VotingPage() {
 
   if (submitted) {
     return (
-      <Layout currentStep={10} backTo="/submit" backLabel="Back">
+      <Layout currentStep={11} backTo="/submit" backLabel="Back">
         <div className="text-center py-12">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-100 mb-8">
             <PartyPopper className="w-10 h-10 text-primary-600" />
@@ -134,7 +134,7 @@ export function VotingPage() {
 
   return (
     <Layout
-      currentStep={10}
+      currentStep={11}
       backTo="/submit"
       backLabel="Back to Submit"
       nextTo="#"
@@ -145,7 +145,7 @@ export function VotingPage() {
       <GenJamHeader
         title="Vote for Your Favorites"
         subtitle="Select 3 films in each category to cast your votes"
-        currentStep={10}
+        currentStep={11}
         emoji="🏆"
       />
 

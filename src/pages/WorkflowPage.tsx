@@ -93,7 +93,7 @@ export function WorkflowPage() {
 
   return (
     <Layout
-      currentStep={5}
+      currentStep={6}
       backTo="/ideas-submission"
       backLabel="Back to Ideas"
       nextTo="/cheatsheet"
@@ -103,7 +103,7 @@ export function WorkflowPage() {
       <GenJamHeader
         title="Production Workflow"
         subtitle="Your roadmap to creating an amazing AI film in 6 hours"
-        currentStep={5}
+        currentStep={6}
         emoji="📋"
       />
 

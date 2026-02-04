@@ -5,3 +5,4 @@ export { GenJamHeader } from './GenJamHeader';
 export { GenJamFooter } from './GenJamFooter';
 export { Logo } from './Logo';
 export { Layout } from './Layout';
+export { AdminLayout } from './AdminLayout';

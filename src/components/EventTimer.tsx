@@ -15,37 +15,41 @@ const STEP_INSTRUCTIONS: Record<number, { current: string; next: string }> = {
   },
   2: {
     current: "Help us understand your strengths so we can form diverse, complementary teams.",
-    next: "💡 Next: Break the ice with fellow creators through a fun activity!",
+    next: "💡 Next: Find out which team you've been assigned to!",
   },
   3: {
+    current: "Find out which team you've been assigned to for this GenJam!",
+    next: "💡 Next: Break the ice with fellow creators through a fun activity!",
+  },
+  4: {
     current: "Share your creative thoughts and connect with fellow participants.",
     next: "💡 Next: Submit your film idea and vote for favorites to form teams!",
   },
-  4: {
+  5: {
     current: "Submit your film idea and vote for your top 3 favorites. Teams form based on shared interests!",
     next: "💡 Next: Review the production timeline and workflow.",
   },
-  5: {
+  6: {
     current: "Review the production timeline and plan your approach for maximum efficiency.",
     next: "💡 Next: Explore AI tools and grab promo codes before you start!",
   },
-  6: {
+  7: {
     current: "Explore tools and grab sponsor promo codes before you start creating.",
     next: "💡 Next: Get inspired by watching past GenJam films!",
   },
-  7: {
+  8: {
     current: "Get inspired by past films. Notice techniques you can use in your own work!",
     next: "💡 Next: Plan your shots visually with the storyboard workspace.",
   },
-  8: {
+  9: {
     current: "Plan your shots visually. This will save time during production!",
     next: "💡 Next: Time to submit your masterpiece!",
   },
-  9: {
+  10: {
     current: "Upload your final film. Make sure everything is perfect before submitting!",
     next: "💡 Next: Vote for your favorite films across three categories.",
   },
-  10: {
+  11: {
     current: "Vote for your favorite films in each category. Choose wisely!",
     next: "🎬 Thank you for participating in GenJam!",
   },

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   RegistrationPage,
   SkillsSurveyPage,
+  MyTeamPage,
   IcebreakerPage,
   IdeasSubmissionPage,
   WorkflowPage,
@@ -10,6 +11,7 @@ import {
   StoryboardPage,
   SubmitPage,
   VotingPage,
+  TeamBuilderPage,
 } from './pages';
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<RegistrationPage />} />
         <Route path="/skills-survey" element={<SkillsSurveyPage />} />
+        <Route path="/my-team" element={<MyTeamPage />} />
         <Route path="/icebreaker" element={<IcebreakerPage />} />
         <Route path="/ideas-submission" element={<IdeasSubmissionPage />} />
         <Route path="/workflow" element={<WorkflowPage />} />
@@ -26,6 +29,7 @@ function App() {
         <Route path="/storyboard" element={<StoryboardPage />} />
         <Route path="/submit" element={<SubmitPage />} />
         <Route path="/voting" element={<VotingPage />} />
+        <Route path="/team-builder" element={<TeamBuilderPage />} />
       </Routes>
     </BrowserRouter>
   );

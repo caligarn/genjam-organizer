@@ -164,7 +164,7 @@ export function CheatSheetPage() {
 
   return (
     <Layout
-      currentStep={6}
+      currentStep={7}
       backTo="/workflow"
       backLabel="Back to Workflow"
       nextTo="/examples"
@@ -174,7 +174,7 @@ export function CheatSheetPage() {
       <GenJamHeader
         title="GenJam Cheat Sheet"
         subtitle="Essential tools and resources for your creative journey"
-        currentStep={6}
+        currentStep={7}
         emoji="🛠️"
       />
 

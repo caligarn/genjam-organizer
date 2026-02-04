@@ -100,7 +100,7 @@ export function ExamplesPage() {
 
   return (
     <Layout
-      currentStep={7}
+      currentStep={8}
       backTo="/cheatsheet"
       backLabel="Back to Cheat Sheet"
       nextTo="/storyboard"
@@ -110,7 +110,7 @@ export function ExamplesPage() {
       <GenJamHeader
         title="Inspiration Gallery"
         subtitle="Learn from past GenJam winners and standout submissions"
-        currentStep={7}
+        currentStep={8}
         emoji="🎬"
       />
 

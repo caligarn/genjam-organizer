@@ -116,7 +116,7 @@ export function SubmitPage() {
 
   return (
     <Layout
-      currentStep={9}
+      currentStep={10}
       backTo="/storyboard"
       backLabel="Back to Storyboard"
       nextTo="/voting"
@@ -127,7 +127,7 @@ export function SubmitPage() {
       <GenJamHeader
         title="Submit Your Final Work"
         subtitle="Upload your completed film and share your creative journey"
-        currentStep={9}
+        currentStep={10}
         emoji="🎥"
       />
 

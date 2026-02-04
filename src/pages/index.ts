@@ -1,5 +1,6 @@
 export { RegistrationPage } from './RegistrationPage';
 export { SkillsSurveyPage } from './SkillsSurveyPage';
+export { MyTeamPage } from './MyTeamPage';
 export { IcebreakerPage } from './IcebreakerPage';
 export { IdeasSubmissionPage } from './IdeasSubmissionPage';
 export { WorkflowPage } from './WorkflowPage';
@@ -8,3 +9,4 @@ export { ExamplesPage } from './ExamplesPage';
 export { StoryboardPage } from './StoryboardPage';
 export { SubmitPage } from './SubmitPage';
 export { VotingPage } from './VotingPage';
+export { TeamBuilderPage } from './TeamBuilderPage';

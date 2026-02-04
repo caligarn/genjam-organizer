@@ -8,7 +8,7 @@ export function GenJamFooter({ className }: GenJamFooterProps) {
   return (
     <footer
       className={cn(
-        'py-40 px-6 mt-auto',
+        'py-16 px-6 mt-auto',
         className
       )}
       style={{ 
@@ -16,7 +16,7 @@ export function GenJamFooter({ className }: GenJamFooterProps) {
         borderTop: '4px solid #FFD700'
       }}
     >
-      <div className="max-w-3xl mx-auto flex flex-col items-center gap-20">
+      <div className="max-w-3xl mx-auto flex flex-col items-center gap-10">
         {/* Logo */}
         <a
           href="https://machinecinema.com"

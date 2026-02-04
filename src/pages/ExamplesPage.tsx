@@ -114,11 +114,11 @@ export function ExamplesPage() {
         emoji="🎬"
       />
 
-      <div className="space-y-32 sm:space-y-40">
+      <div className="space-y-12 sm:space-y-16">
         {/* Tips Card */}
         <div className="card bg-secondary-50 border border-secondary-200">
-          <h3 className="font-bold mb-32">🎯 What to Look For</h3>
-          <ul className="grid md:grid-cols-2 gap-8 text-sm text-gray-700">
+          <h3 className="font-bold mb-8">🎯 What to Look For</h3>
+          <ul className="grid md:grid-cols-2 gap-3 text-sm text-gray-700">
             <li>• <strong>Pacing</strong> - How do they maintain interest?</li>
             <li>• <strong>Style</strong> - What visual choices make it unique?</li>
             <li>• <strong>Sound</strong> - How does audio enhance the story?</li>
@@ -127,7 +127,7 @@ export function ExamplesPage() {
         </div>
 
         {/* Films Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-32">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
           {EXAMPLE_FILMS.map((film) => (
             <div
               key={film.id}
@@ -171,9 +171,9 @@ export function ExamplesPage() {
               </div>
 
               {/* Info */}
-              <div className="p-24">
+              <div className="p-6">
                 <h3 className="font-bold text-lg mb-1">{film.title}</h3>
-                <p className="text-sm text-gray-500 mb-12">{film.team} • {film.event}</p>
+                <p className="text-sm text-gray-500 mb-3">{film.team} • {film.event}</p>
                 <p className="text-sm text-gray-600 line-clamp-2">{film.description}</p>
               </div>
             </div>
@@ -206,7 +206,7 @@ export function ExamplesPage() {
             </div>
 
             {/* Details */}
-            <div className="p-24 space-y-16">
+            <div className="p-6 space-y-6">
               <div className="flex items-start justify-between">
                 <div>
                   <h2 className="text-2xl font-bold">{selectedFilm.title}</h2>
@@ -227,8 +227,8 @@ export function ExamplesPage() {
               <p className="text-gray-700">{selectedFilm.description}</p>
 
               <div>
-                <h4 className="font-semibold mb-12">Tools Used</h4>
-                <div className="flex flex-wrap gap-8">
+                <h4 className="font-semibold mb-3">Tools Used</h4>
+                <div className="flex flex-wrap gap-3">
                   {selectedFilm.tools.map((tool) => (
                     <span key={tool} className="px-3 py-1 bg-gray-100 rounded-full text-sm">{tool}</span>
                   ))}
@@ -236,7 +236,7 @@ export function ExamplesPage() {
               </div>
 
               <div>
-                <h4 className="font-semibold mb-12">Notable Techniques</h4>
+                <h4 className="font-semibold mb-3">Notable Techniques</h4>
                 <ul className="space-y-5">
                   {selectedFilm.techniques.map((technique) => (
                     <li key={technique} className="text-sm text-gray-600">• {technique}</li>

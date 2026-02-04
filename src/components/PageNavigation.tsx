@@ -29,7 +29,7 @@ export function PageNavigation({
   );
 
   return (
-    <div className={cn('flex items-center justify-between gap-20', className)}>
+    <div className={cn('flex items-center justify-between gap-6', className)}>
       {/* Back Button */}
       {backTo ? (
         <Link

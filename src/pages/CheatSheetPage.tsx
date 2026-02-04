@@ -178,17 +178,17 @@ export function CheatSheetPage() {
         emoji="🛠️"
       />
 
-      <div className="space-y-32 sm:space-y-40">
+      <div className="space-y-12 sm:space-y-16">
         {/* Sponsors */}
         <div className="card">
-          <div className="flex items-center gap-8 mb-32">
+          <div className="flex items-center gap-3 mb-8">
             <Sparkles className="w-5 h-5 text-primary-500" />
             <h2 className="text-xl font-bold">Today's Sponsors</h2>
           </div>
-          <p className="text-gray-600 mb-32">Thank you to our amazing sponsors for making this event possible!</p>
-          <div className="flex justify-center gap-32 flex-wrap">
+          <p className="text-gray-600 mb-8">Thank you to our amazing sponsors for making this event possible!</p>
+          <div className="flex justify-center gap-3 flex-wrap">
             {SPONSORS.map((sponsor) => (
-              <div key={sponsor.name} className="flex flex-col items-center gap-8">
+              <div key={sponsor.name} className="flex flex-col items-center gap-3">
                 <div className="w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center text-3xl">
                   {sponsor.logo}
                 </div>
@@ -200,18 +200,18 @@ export function CheatSheetPage() {
 
         {/* Tool Categories */}
         {TOOL_CATEGORIES.map((category) => (
-          <div key={category.id} className="space-y-16">
-            <div className="flex items-center gap-12">
+          <div key={category.id} className="space-y-6">
+            <div className="flex items-center gap-3">
               <div className={cn('w-10 h-10 rounded-2xl bg-gradient-to-br text-white flex items-center justify-center', category.color)}>
                 {category.icon}
               </div>
               <h2 className="text-xl font-bold">{category.name}</h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-32">
+            <div className="grid md:grid-cols-2 gap-3">
               {category.tools.map((tool) => (
                 <div key={tool.name} className="card">
-                  <div className="flex items-start justify-between mb-12">
+                  <div className="flex items-start justify-between mb-3">
                     <h3 className="text-lg font-bold">{tool.name}</h3>
                     <a
                       href={tool.link}
@@ -222,9 +222,9 @@ export function CheatSheetPage() {
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
-                  <p className="text-gray-600 text-sm mb-12">{tool.description}</p>
+                  <p className="text-gray-600 text-sm mb-3">{tool.description}</p>
 
-                  <div className="flex flex-wrap gap-1.5 mb-12">
+                  <div className="flex flex-wrap gap-1.5 mb-3">
                     {tool.features.map((feature) => (
                       <span key={feature} className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs">
                         {feature}
@@ -232,14 +232,14 @@ export function CheatSheetPage() {
                     ))}
                   </div>
 
-                  <div className="bg-gray-50 rounded-lg p-12 mb-12">
+                  <div className="bg-gray-50 rounded-lg p-4 mb-3">
                     <p className="text-sm text-gray-700">
                       <span className="font-semibold">💡 Tip:</span> {tool.tips}
                     </p>
                   </div>
 
                   {tool.promoCode && (
-                    <div className="bg-amber-50 border-2 border-dashed border-amber-300 rounded-lg p-12">
+                    <div className="bg-amber-50 border-2 border-dashed border-amber-300 rounded-lg p-4">
                       <div className="flex items-center justify-between">
                         <div>
                           <p className="text-xs text-amber-600 font-medium mb-1">🎁 PROMO CODE</p>

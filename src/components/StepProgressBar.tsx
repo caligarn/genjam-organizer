@@ -30,7 +30,7 @@ export function StepProgressBar({ currentStep, className }: StepProgressBarProps
     <div className={cn('w-full', className)}>
       {/* Mobile: Compact progress bar with step indicator */}
       <div className="md:hidden">
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
             <span className="text-2xl">🎬</span>
             <span className="text-sm font-bold text-[#1a1a1a]">

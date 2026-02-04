@@ -35,19 +35,19 @@ export function FollowupPage() {
     <Layout currentStep={11} backTo="/voting" backLabel="Back to Voting" showTimer={false}>
       <GenJamHeader title="Thank You for Participating!" subtitle="Stay connected with the Machine Cinema community" currentStep={11} emoji="🎉" />
 
-      <div className="space-y-32 sm:space-y-40">
+      <div className="space-y-12 sm:space-y-16">
         {/* Celebration Banner */}
         <div className="card bg-gradient-hero text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.15),transparent)]" />
           <div className="relative">
-            <PartyPopper className="w-12 h-12 mx-auto mb-12" />
+            <PartyPopper className="w-12 h-12 mx-auto mb-3" />
             <h2 className="text-2xl font-bold mb-6">Congratulations to All Participants!</h2>
             <p className="opacity-90">You created something amazing in just a few hours. Be proud of what you accomplished!</p>
           </div>
         </div>
 
         {/* Event Stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-32">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {STATS.map((stat) => (
             <div key={stat.label} className="card text-center">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 mx-auto mb-6 sm:mb-8">
@@ -61,15 +61,15 @@ export function FollowupPage() {
 
         {/* Winners */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-32 flex items-center gap-6">
+          <h2 className="text-xl font-bold mb-8 flex items-center gap-6">
             <Trophy className="w-5 h-5 text-amber-500" />
             Winners Announcement
           </h2>
-          <div className="grid md:grid-cols-3 gap-32">
+          <div className="grid md:grid-cols-3 gap-3">
             {WINNERS.map((winner) => {
               const colors = getColorClasses(winner.color);
               return (
-                <div key={winner.category} className={cn('rounded-xl p-12 border-2', colors.light, `border-${winner.color}-200`)}>
+                <div key={winner.category} className={cn('rounded-xl p-4 border-2', colors.light, `border-${winner.color}-200`)}>
                   <div className={cn('w-10 h-10 rounded-xl flex items-center justify-center text-white mb-8', colors.bg)}>
                     {winner.icon}
                   </div>
@@ -85,14 +85,14 @@ export function FollowupPage() {
 
         {/* Join Community */}
         <div className="card border-2 border-primary-200 bg-primary-50">
-          <div className="flex items-start gap-12">
+          <div className="flex items-start gap-3">
             <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center text-white flex-shrink-0">
               <Heart className="w-7 h-7" />
             </div>
             <div className="flex-1">
               <h2 className="text-xl font-bold mb-6">Join Machine Cinema</h2>
-              <p className="text-gray-600 mb-12">Stay connected with our global community of AI creators. Get notified about future events, share your work, and collaborate with fellow filmmakers.</p>
-              <div className="flex flex-wrap gap-8">
+              <p className="text-gray-600 mb-3">Stay connected with our global community of AI creators. Get notified about future events, share your work, and collaborate with fellow filmmakers.</p>
+              <div className="flex flex-wrap gap-3">
                 <a href="https://lu.ma/machinecinema" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   <Calendar className="w-4 h-4" />
                   View Upcoming Events
@@ -109,8 +109,8 @@ export function FollowupPage() {
 
         {/* Social Links */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-32">Follow Us</h2>
-          <div className="flex gap-12">
+          <h2 className="text-xl font-bold mb-8">Follow Us</h2>
+          <div className="flex gap-3">
             <a href="https://instagram.com/machinecinema" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white hover:scale-110 transition-transform">
               <Instagram className="w-6 h-6" />
             </a>
@@ -121,16 +121,16 @@ export function FollowupPage() {
               <Youtube className="w-6 h-6" />
             </a>
           </div>
-          <p className="text-sm text-gray-500 mt-12">Share your film with <span className="font-semibold text-primary-600">#GenJam2025</span> and tag <span className="font-semibold text-primary-600">@MachineCinema</span></p>
+          <p className="text-sm text-gray-500 mt-4">Share your film with <span className="font-semibold text-primary-600">#GenJam2025</span> and tag <span className="font-semibold text-primary-600">@MachineCinema</span></p>
         </div>
 
         {/* Sponsors */}
         <div className="card">
-          <div className="flex items-center gap-6 mb-32">
+          <div className="flex items-center gap-6 mb-8">
             <Sparkles className="w-5 h-5 text-primary-500" />
             <h2 className="text-xl font-bold">Thank You to Our Sponsors</h2>
           </div>
-          <div className="flex justify-center gap-32 flex-wrap">
+          <div className="flex justify-center gap-3 flex-wrap">
             {SPONSORS.map((sponsor) => (
               <div key={sponsor.name} className="flex flex-col items-center gap-6">
                 <div className="w-16 h-16 rounded-xl bg-gray-100 flex items-center justify-center text-3xl">{sponsor.logo}</div>
@@ -141,7 +141,7 @@ export function FollowupPage() {
         </div>
 
         {/* Final Message */}
-        <div className="text-center py-32">
+        <div className="text-center py-8">
           <p className="text-2xl font-display font-bold text-gradient mb-6">See you at the next GenJam!</p>
           <p className="text-gray-500">Keep creating. Keep experimenting. Keep pushing boundaries.</p>
         </div>

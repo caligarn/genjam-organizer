@@ -12,9 +12,9 @@ export function AdminLayout({ children, className }: AdminLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 flex justify-center">
-        <div className={cn('w-full max-w-6xl px-6 sm:px-8 lg:px-12 py-32 sm:py-40', className)}>
+        <div className={cn('w-full max-w-6xl px-6 sm:px-8 lg:px-12 py-16 sm:py-20', className)}>
           {/* Header: Logo + Organizer badge */}
-          <div className="flex flex-col items-center gap-12 mb-32 sm:mb-40">
+          <div className="flex flex-col items-center gap-6 mb-16 sm:mb-20">
             <Logo size="lg" />
             <span
               className="text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider"

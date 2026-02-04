@@ -103,19 +103,19 @@ export function VotingPage() {
   if (submitted) {
     return (
       <Layout currentStep={11} backTo="/submit" backLabel="Back">
-        <div className="text-center py-48">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-100 mb-32">
+        <div className="text-center py-16">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-100 mb-8">
             <PartyPopper className="w-10 h-10 text-primary-600" />
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-32">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
             🎉 Thank You for Participating!
           </h1>
-          <p className="text-lg text-gray-600 max-w-md mx-auto mb-32">
+          <p className="text-lg text-gray-600 max-w-md mx-auto mb-8">
             Your votes have been submitted successfully. Thank you for being part of GenJam 2025!
           </p>
           <div className="card max-w-md mx-auto">
-            <h3 className="font-bold mb-32">Stay Connected</h3>
-            <p className="text-sm text-gray-600 mb-32">
+            <h3 className="font-bold mb-8">Stay Connected</h3>
+            <p className="text-sm text-gray-600 mb-8">
               Follow Machine Cinema for future events and community updates.
             </p>
             <a
@@ -149,9 +149,9 @@ export function VotingPage() {
         emoji="🏆"
       />
 
-      <div className="space-y-32 sm:space-y-40">
+      <div className="space-y-12 sm:space-y-16">
         {/* Category Tabs */}
-        <div className="flex gap-8 overflow-x-auto pb-2">
+        <div className="flex gap-3 overflow-x-auto pb-2">
           {CATEGORIES.map((category) => {
             const colors = getCategoryColor(category.color);
             const voteCount = votes[category.id].length;
@@ -162,7 +162,7 @@ export function VotingPage() {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={cn(
-                  'flex items-center gap-8 px-4 py-3 rounded-2xl font-medium whitespace-nowrap transition-all',
+                  'flex items-center gap-3 px-4 py-3 rounded-2xl font-medium whitespace-nowrap transition-all',
                   isActive
                     ? `${colors.bg} text-white shadow-lg`
                     : `${colors.light} ${colors.text} ${colors.border} border hover:opacity-80`
@@ -183,14 +183,14 @@ export function VotingPage() {
         </div>
 
         {/* Category Description */}
-        <div className={cn('rounded-2xl p-24 border', activeColors.light, activeColors.border)}>
+        <div className={cn('rounded-2xl p-6 border', activeColors.light, activeColors.border)}>
           <p className={cn('text-sm', activeColors.text)}>
             {CATEGORIES.find((c) => c.id === activeCategory)?.description}
           </p>
         </div>
 
         {/* Submissions Grid */}
-        <div className="grid grid-cols-2 gap-32">
+        <div className="grid grid-cols-2 gap-3">
           {SUBMISSIONS.map((submission) => {
             const isSelected = votes[activeCategory].includes(submission.id);
             const canSelect = votes[activeCategory].length < 3;
@@ -236,7 +236,7 @@ export function VotingPage() {
                 </div>
 
                 {/* Info */}
-                <div className="p-12 bg-white">
+                <div className="p-4 bg-white">
                   <h4 className="font-medium text-sm truncate">{submission.title}</h4>
                   <p className="text-xs text-gray-500 truncate">{submission.team}</p>
                 </div>
@@ -247,8 +247,8 @@ export function VotingPage() {
 
         {/* Vote Status */}
         <div className="card">
-          <h3 className="font-bold mb-32">Vote Summary</h3>
-          <div className="grid gap-32">
+          <h3 className="font-bold mb-8">Vote Summary</h3>
+          <div className="grid gap-3">
             {CATEGORIES.map((category) => {
               const colors = getCategoryColor(category.color);
               const voteCount = votes[category.id].length;
@@ -258,11 +258,11 @@ export function VotingPage() {
                 <div
                   key={category.id}
                   className={cn(
-                    'rounded-2xl p-24 border',
+                    'rounded-2xl p-6 border',
                     isComplete ? `${colors.light} ${colors.border}` : 'bg-gray-50 border-gray-200'
                   )}
                 >
-                  <div className="flex items-center justify-between mb-12">
+                  <div className="flex items-center justify-between mb-3">
                     <span className="font-medium">{category.name}</span>
                     {isComplete ? (
                       <span className={cn('text-sm font-medium', colors.text)}>✓ Complete</span>
@@ -287,7 +287,7 @@ export function VotingPage() {
           </div>
 
           {!isComplete() && (
-            <p className="mt-16 text-sm text-gray-500 text-center">
+            <p className="mt-6 text-sm text-gray-500 text-center">
               Please select 3 favorites in each category before submitting.
             </p>
           )}

@@ -35,19 +35,19 @@ export function Layout({
     <div className="min-h-screen flex flex-col">
       {/* Main Content */}
       <main className="flex-1 flex justify-center">
-        <div className={cn('w-full max-w-4xl px-6 sm:px-8 lg:px-12 py-8 sm:py-10', className)}>
+        <div className={cn('w-full max-w-4xl px-6 sm:px-8 lg:px-12 py-[10rem] sm:py-[13rem]', className)}>
           {/* Header with Logo */}
-          <div className="flex justify-center mb-8 sm:mb-10">
+          <div className="flex justify-center mb-[10rem] sm:mb-[13rem]">
             <Logo size="lg" />
           </div>
 
           {/* Timer and Instructions */}
           {showTimer && (
-            <EventTimer currentStep={currentStep} className="mb-8 sm:mb-10" />
+            <EventTimer currentStep={currentStep} className="mb-[10rem] sm:mb-[13rem]" />
           )}
 
           {/* Step Progress Bar */}
-          <StepProgressBar currentStep={currentStep} className="mb-8 sm:mb-10" />
+          <StepProgressBar currentStep={currentStep} className="mb-[10rem] sm:mb-[13rem]" />
 
           {/* Navigation Button - positioned before content */}
           <PageNavigation
@@ -57,7 +57,7 @@ export function Layout({
             nextLabel={nextLabel}
             nextDisabled={nextDisabled}
             onNext={onNext}
-            className="mb-8 sm:mb-10"
+            className="mb-[10rem] sm:mb-[13rem]"
           />
 
           {/* Page Content */}
@@ -71,7 +71,7 @@ export function Layout({
             nextLabel={nextLabel}
             nextDisabled={nextDisabled}
             onNext={onNext}
-            className="mt-10 sm:mt-12"
+            className="mt-[13rem] sm:mt-[15rem]"
           />
         </div>
       </main>

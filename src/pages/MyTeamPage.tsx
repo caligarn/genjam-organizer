@@ -65,17 +65,17 @@ export function MyTeamPage() {
         emoji="👥"
       />
 
-      <div className="space-y-8 sm:space-y-10">
+      <div className="space-y-[10rem] sm:space-y-[13rem]">
         {!teamsData ? (
           /* Teams not published yet */
-          <div className="card text-center py-12 sm:py-16">
+          <div className="card text-center py-[15rem] sm:py-[20rem]">
             <div
-              className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6"
+              className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-[8rem]"
               style={{ backgroundColor: '#F5F5F5', border: '3px solid #E5E5E5' }}
             >
               <Clock className="w-8 h-8 text-gray-400" />
             </div>
-            <h2 className="text-xl font-bold mb-3" style={{ color: '#1a1a1a' }}>
+            <h2 className="text-xl font-bold mb-[4rem]" style={{ color: '#1a1a1a' }}>
               Teams Haven't Been Assigned Yet
             </h2>
             <p className="text-gray-500 max-w-md mx-auto">
@@ -86,11 +86,11 @@ export function MyTeamPage() {
           <>
             {/* Email search */}
             <div className="card">
-              <h2 className="text-xl font-bold mb-6">Find Your Team</h2>
-              <p className="text-gray-600 mb-6">
+              <h2 className="text-xl font-bold mb-[8rem]">Find Your Team</h2>
+              <p className="text-gray-600 mb-[8rem]">
                 Enter the email address you used when signing up to see your team assignment.
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-[4rem]">
                 <input
                   type="email"
                   value={email}
@@ -108,11 +108,11 @@ export function MyTeamPage() {
 
             {/* Search result */}
             {searchResult && !searchResult.found && (
-              <div className="card text-center py-8" style={{ borderColor: '#FF3366' }}>
+              <div className="card text-center py-[10rem]" style={{ borderColor: '#FF3366' }}>
                 <p className="font-bold" style={{ color: '#FF3366' }}>
                   We couldn't find that email address
                 </p>
-                <p className="text-sm text-gray-500 mt-2">
+                <p className="text-sm text-gray-500 mt-[2.5rem]">
                   Please check the email you used to register and try again.
                 </p>
               </div>
@@ -120,9 +120,9 @@ export function MyTeamPage() {
 
             {searchResult && searchResult.found && (
               <div className="card" style={{ borderColor: '#00D954' }}>
-                <div className="text-center mb-8">
+                <div className="text-center mb-[10rem]">
                   <div
-                    className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4"
+                    className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-[5rem]"
                     style={{ backgroundColor: '#FFD700', border: '3px solid #1a1a1a' }}
                   >
                     <Users className="w-8 h-8" />
@@ -130,17 +130,17 @@ export function MyTeamPage() {
                   <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: '#1a1a1a' }}>
                     You're on Team {searchResult.teamId}!
                   </h2>
-                  <p className="text-gray-500 mt-2">Here are your teammates</p>
+                  <p className="text-gray-500 mt-[2.5rem]">Here are your teammates</p>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-[4rem]">
                   {searchResult.members.map((m) => {
                     const isCurrentUser = m.email.toLowerCase() === email.trim().toLowerCase();
                     return (
                       <div
                         key={m.email}
                         className={cn(
-                          'flex items-center gap-3 px-4 py-3 rounded-xl transition-all',
+                          'flex items-center gap-[4rem] px-4 py-3 rounded-xl transition-all',
                           isCurrentUser
                             ? 'bg-[#FFF8DC]'
                             : 'bg-gray-50'
@@ -196,11 +196,11 @@ export function MyTeamPage() {
                   }
                   if (allSkills.size === 0) return null;
                   return (
-                    <div className="mt-6 pt-4 border-t border-gray-100">
-                      <p className="text-sm font-medium text-gray-500 mb-2 flex items-center gap-1">
+                    <div className="mt-[8rem] pt-20 border-t border-gray-100">
+                      <p className="text-sm font-medium text-gray-500 mb-10 flex items-center gap-1">
                         <Star className="w-3.5 h-3.5" /> Team Skills
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-[2.5rem]">
                         {Array.from(allSkills).map((s) => (
                           <span key={s} className="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium">
                             {s}

@@ -198,19 +198,19 @@ export function TeamBuilderPage() {
   return (
     <AdminLayout>
       {/* Page Title */}
-      <div className="text-center mb-8 sm:mb-10">
+      <div className="text-center mb-[10rem] sm:mb-52">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: '#1a1a1a' }}>
           Team Builder
         </h1>
-        <p className="text-lg text-gray-500 mt-3 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-500 mt-[4rem] max-w-2xl mx-auto">
           Upload your Google Form responses, configure constraints, and generate balanced teams.
         </p>
       </div>
 
       {/* Phase Breadcrumb */}
-      <div className="flex items-center justify-center gap-2 mb-8 sm:mb-10 flex-wrap">
+      <div className="flex items-center justify-center gap-[2.5rem] mb-[10rem] sm:mb-52 flex-wrap">
         {PHASES.map((p, i) => (
-          <div key={p} className="flex items-center gap-2">
+          <div key={p} className="flex items-center gap-[2.5rem]">
             <button
               onClick={() => {
                 if (p === 'upload' || (p === 'preview' && participants.length > 0) || (p === 'configure' && participants.length > 0) || (p === 'results' && options.length > 0)) {
@@ -236,10 +236,10 @@ export function TeamBuilderPage() {
 
       {/* ═══════════════ UPLOAD PHASE ═══════════════ */}
       {phase === 'upload' && (
-        <div className="space-y-8">
+        <div className="space-y-[10rem]">
           <div
             className={cn(
-              'card flex flex-col items-center justify-center py-16 sm:py-20 cursor-pointer transition-all',
+              'card flex flex-col items-center justify-center py-80 sm:py-96 cursor-pointer transition-all',
               isDragOver && 'ring-4 ring-[#FFD700] ring-offset-2'
             )}
             onDrop={handleDrop}
@@ -248,13 +248,13 @@ export function TeamBuilderPage() {
             onClick={() => fileInputRef.current?.click()}
           >
             <div
-              className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6"
+              className="w-20 h-20 rounded-2xl flex items-center justify-center mb-[8rem]"
               style={{ backgroundColor: isDragOver ? '#FFD700' : '#F5F5F5', border: '3px solid #1a1a1a' }}
             >
               <Upload className="w-10 h-10" style={{ color: isDragOver ? '#1a1a1a' : '#999' }} />
             </div>
-            <h2 className="text-xl font-bold mb-2">Drop your CSV here</h2>
-            <p className="text-gray-500 mb-6">or click to browse files</p>
+            <h2 className="text-xl font-bold mb-10">Drop your CSV here</h2>
+            <p className="text-gray-500 mb-[8rem]">or click to browse files</p>
             <span className="badge badge-secondary">CSV from Google Sheets</span>
             <input
               ref={fileInputRef}
@@ -267,7 +267,7 @@ export function TeamBuilderPage() {
 
           {parseErrors.length > 0 && participants.length === 0 && (
             <div className="card" style={{ borderColor: '#FF3366' }}>
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-[4rem]">
                 <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#FF3366' }} />
                 <div>
                   <h3 className="font-bold text-[#FF3366]">Parse Errors</h3>
@@ -281,7 +281,7 @@ export function TeamBuilderPage() {
 
           {/* Expected format hint */}
           <div className="card">
-            <h3 className="font-bold mb-4 flex items-center gap-2">
+            <h3 className="font-bold mb-[5rem] flex items-center gap-[2.5rem]">
               <FileSpreadsheet className="w-5 h-5" />
               Expected CSV Format
             </h3>
@@ -311,29 +311,29 @@ export function TeamBuilderPage() {
 
       {/* ═══════════════ PREVIEW PHASE ═══════════════ */}
       {phase === 'preview' && (
-        <div className="space-y-8">
+        <div className="space-y-[10rem]">
           {/* Stats bar */}
-          <div className="flex flex-wrap gap-4">
-            <div className="card flex-1 min-w-[140px] text-center py-4">
+          <div className="flex flex-wrap gap-[5rem]">
+            <div className="card flex-1 min-w-[140px] text-center py-20">
               <div className="text-3xl font-bold" style={{ color: '#1a1a1a' }}>{participants.length}</div>
               <div className="text-sm text-gray-500 font-medium mt-1">Participants</div>
             </div>
-            <div className="card flex-1 min-w-[140px] text-center py-4">
+            <div className="card flex-1 min-w-[140px] text-center py-20">
               <div className="text-3xl font-bold" style={{ color: '#00D954' }}>{participants.filter((p) => p.isEditor).length}</div>
               <div className="text-sm text-gray-500 font-medium mt-1">Editors</div>
             </div>
-            <div className="card flex-1 min-w-[140px] text-center py-4">
+            <div className="card flex-1 min-w-[140px] text-center py-20">
               <div className="text-3xl font-bold" style={{ color: '#00D4FF' }}>{participants.filter((p) => p.aiCapabilityScore >= 3).length}</div>
               <div className="text-sm text-gray-500 font-medium mt-1">AI Leads (3+)</div>
             </div>
-            <div className="card flex-1 min-w-[140px] text-center py-4">
+            <div className="card flex-1 min-w-[140px] text-center py-20">
               <div className="text-3xl font-bold" style={{ color: '#9966FF' }}>{participants.filter((p) => p.durationCommitment === 'FULL' || p.durationCommitment === 'MOST').length}</div>
               <div className="text-sm text-gray-500 font-medium mt-1">Full Duration</div>
             </div>
           </div>
 
           {parseErrors.length > 0 && (
-            <div className="rounded-xl px-5 py-4 flex items-start gap-3" style={{ backgroundColor: '#FFF3CD', border: '2px solid #FFD700' }}>
+            <div className="rounded-xl px-24 py-20 flex items-start gap-[4rem]" style={{ backgroundColor: '#FFF3CD', border: '2px solid #FFD700' }}>
               <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#CC8800' }} />
               <div>
                 <p className="font-bold text-sm" style={{ color: '#CC8800' }}>{parseErrors.length} row(s) had issues</p>
@@ -347,7 +347,7 @@ export function TeamBuilderPage() {
 
           {/* Participant table */}
           <div className="card overflow-hidden">
-            <h3 className="font-bold mb-4">Participant Preview</h3>
+            <h3 className="font-bold mb-[5rem]">Participant Preview</h3>
             <div className="overflow-x-auto -mx-6 sm:-mx-8 px-6 sm:px-8">
               <table className="w-full text-sm min-w-[700px]">
                 <thead>
@@ -432,13 +432,13 @@ export function TeamBuilderPage() {
 
       {/* ═══════════════ CONFIGURE PHASE ═══════════════ */}
       {phase === 'configure' && (
-        <div className="space-y-8">
+        <div className="space-y-[10rem]">
           {/* Team Size */}
           <div className="card">
-            <h3 className="font-bold mb-6 flex items-center gap-2">
+            <h3 className="font-bold mb-[8rem] flex items-center gap-[2.5rem]">
               <Users className="w-5 h-5" /> Team Size
             </h3>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-[8rem]">
               <input
                 type="range"
                 min={4}
@@ -455,17 +455,17 @@ export function TeamBuilderPage() {
                 {config.teamSize}
               </span>
             </div>
-            <p className="text-sm text-gray-500 mt-3">
+            <p className="text-sm text-gray-500 mt-[4rem]">
               {participants.length} participants / {config.teamSize} per team = {Math.ceil(participants.length / config.teamSize)} teams
             </p>
           </div>
 
           {/* Hard Constraints */}
           <div className="card">
-            <h3 className="font-bold mb-6 flex items-center gap-2">
+            <h3 className="font-bold mb-[8rem] flex items-center gap-[2.5rem]">
               <Shield className="w-5 h-5" /> Hard Constraints
             </h3>
-            <div className="space-y-5">
+            <div className="space-y-[6rem]">
               <ToggleRow
                 label="Require editor per team"
                 description="Every team must have at least one person who can edit end-to-end"
@@ -492,10 +492,10 @@ export function TeamBuilderPage() {
 
           {/* Soft Weights */}
           <div className="card">
-            <h3 className="font-bold mb-6 flex items-center gap-2">
+            <h3 className="font-bold mb-[8rem] flex items-center gap-[2.5rem]">
               <Zap className="w-5 h-5" /> Optimization Weights
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-[8rem]">
               <WeightSlider label="AI Skill Balance" value={config.weightAIBalance} onChange={(v) => updateConfig({ weightAIBalance: v })} />
               <WeightSlider label="Duration Stability" value={config.weightDurationBalance} onChange={(v) => updateConfig({ weightDurationBalance: v })} />
               <WeightSlider label="Skill Coverage" value={config.weightSkillCoverage} onChange={(v) => updateConfig({ weightSkillCoverage: v })} />
@@ -506,7 +506,7 @@ export function TeamBuilderPage() {
           {/* Feasibility Display */}
           {feasibility && (
             <div className="card" style={{ borderColor: feasibility.feasible ? '#00D954' : '#FF3366' }}>
-              <h3 className="font-bold mb-4 flex items-center gap-2">
+              <h3 className="font-bold mb-[5rem] flex items-center gap-[2.5rem]">
                 {feasibility.feasible ? (
                   <CheckCircle className="w-5 h-5" style={{ color: '#00D954' }} />
                 ) : (
@@ -516,9 +516,9 @@ export function TeamBuilderPage() {
               </h3>
 
               {feasibility.errors.length > 0 && (
-                <div className="space-y-2 mb-4">
+                <div className="space-y-10 mb-[5rem]">
                   {feasibility.errors.map((err, i) => (
-                    <div key={i} className="flex items-start gap-2 text-sm">
+                    <div key={i} className="flex items-start gap-[2.5rem] text-sm">
                       <XCircle className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: '#FF3366' }} />
                       <span style={{ color: '#FF3366' }}>{err}</span>
                     </div>
@@ -527,9 +527,9 @@ export function TeamBuilderPage() {
               )}
 
               {feasibility.warnings.length > 0 && (
-                <div className="space-y-2 mb-4">
+                <div className="space-y-10 mb-[5rem]">
                   {feasibility.warnings.map((w, i) => (
-                    <div key={i} className="flex items-start gap-2 text-sm">
+                    <div key={i} className="flex items-start gap-[2.5rem] text-sm">
                       <AlertTriangle className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: '#CC8800' }} />
                       <span className="text-gray-600">{w}</span>
                     </div>
@@ -537,7 +537,7 @@ export function TeamBuilderPage() {
                 </div>
               )}
 
-              <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+              <div className="flex flex-wrap gap-[5rem] text-sm text-gray-500">
                 <span>{feasibility.stats.totalParticipants} participants</span>
                 <span>{feasibility.stats.expectedTeamCount} teams</span>
                 <span>{feasibility.stats.editorCount} editors</span>
@@ -566,10 +566,10 @@ export function TeamBuilderPage() {
 
       {/* ═══════════════ RESULTS PHASE ═══════════════ */}
       {phase === 'results' && (
-        <div className="space-y-8">
+        <div className="space-y-[10rem]">
           {published && (
             <div
-              className="rounded-xl px-5 py-4 flex items-start gap-3"
+              className="rounded-xl px-24 py-20 flex items-start gap-[4rem]"
               style={{ backgroundColor: '#E8FFF0', border: '2px solid #00D954' }}
             >
               <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#00D954' }} />
@@ -583,13 +583,13 @@ export function TeamBuilderPage() {
           )}
 
           {options.length === 0 ? (
-            <div className="card text-center py-12">
+            <div className="card text-center py-60">
               <p className="text-gray-500">No options generated. Try adjusting constraints.</p>
             </div>
           ) : (
             <>
               {/* Option Tabs */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-[4rem]">
                 {options.map((opt) => (
                   <button
                     key={opt.id}
@@ -614,20 +614,20 @@ export function TeamBuilderPage() {
                 if (!activeOption) return null;
 
                 return (
-                  <div className="space-y-6">
+                  <div className="space-y-[8rem]">
                     {/* Team Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-[8rem]">
                       {activeOption.teams.map((team) => (
                         <div key={team.id} className="card">
-                          <div className="flex items-center justify-between mb-4">
+                          <div className="flex items-center justify-between mb-[5rem]">
                             <h4 className="font-bold text-lg">Team {team.id}</h4>
                             <span className="text-sm text-gray-400">{team.members.length} members</span>
                           </div>
 
                           {/* Members */}
-                          <div className="space-y-2.5 mb-4">
+                          <div className="space-y-12 mb-[5rem]">
                             {team.members.map((m) => (
-                              <div key={m.email} className="flex items-center gap-2.5 text-sm">
+                              <div key={m.email} className="flex items-center gap-12 text-sm">
                                 <span
                                   className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
                                   style={{
@@ -660,7 +660,7 @@ export function TeamBuilderPage() {
                           </div>
 
                           {/* Diagnostics row */}
-                          <div className="pt-3 border-t border-gray-100 flex flex-wrap gap-3 text-xs">
+                          <div className="pt-16 border-t border-gray-100 flex flex-wrap gap-[4rem] text-xs">
                             <span className={cn('flex items-center gap-1', team.diagnostics.hasEditor ? 'text-green-600' : 'text-red-500')}>
                               {team.diagnostics.hasEditor ? <CheckCircle className="w-3.5 h-3.5" /> : <XCircle className="w-3.5 h-3.5" />}
                               Editor
@@ -681,7 +681,7 @@ export function TeamBuilderPage() {
                     </div>
 
                     {/* Action buttons */}
-                    <div className="flex flex-wrap gap-4 justify-center">
+                    <div className="flex flex-wrap gap-[5rem] justify-center">
                       <button
                         className="btn btn-primary"
                         onClick={() => handlePublish(activeOption.id)}
@@ -733,7 +733,7 @@ function ToggleRow({
   onChange: (v: boolean) => void;
 }) {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-[5rem]">
       <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-gray-100 flex-shrink-0">
         {icon}
       </div>
@@ -772,7 +772,7 @@ function WeightSlider({
 }) {
   return (
     <div>
-      <div className="flex items-center justify-between mb-2">
+      <div className="flex items-center justify-between mb-10">
         <span className="text-sm font-medium">{label}</span>
         <span className="text-sm text-gray-500 font-mono">{Math.round(value * 100)}%</span>
       </div>

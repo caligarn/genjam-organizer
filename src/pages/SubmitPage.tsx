@@ -131,23 +131,23 @@ export function SubmitPage() {
         emoji="🎥"
       />
 
-      <div className="space-y-8 sm:space-y-10">
+      <div className="space-y-[10rem] sm:space-y-[13rem]">
         {/* Upload Section */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-8 flex items-center gap-2">
+          <h2 className="text-xl font-bold mb-[10rem] flex items-center gap-2">
             <Upload className="w-5 h-5 text-primary-500" />
             Video Upload
           </h2>
 
           {!file ? (
             <label
-              className="block border-2 border-dashed border-gray-300 rounded-2xl p-10 text-center cursor-pointer hover:border-primary-400 hover:bg-primary-50 transition-all"
+              className="block border-2 border-dashed border-gray-300 rounded-2xl p-[13rem] text-center cursor-pointer hover:border-primary-400 hover:bg-primary-50 transition-all"
             >
-              <FileVideo className="w-12 h-12 text-gray-400 mx-auto mb-8" />
-              <p className="text-lg font-medium text-gray-700 mb-3">
+              <FileVideo className="w-12 h-12 text-gray-400 mx-auto mb-[10rem]" />
+              <p className="text-lg font-medium text-gray-700 mb-[4rem]">
                 Drag and drop your video here
               </p>
-              <p className="text-sm text-gray-500 mb-8">
+              <p className="text-sm text-gray-500 mb-[10rem]">
                 or click to browse
               </p>
               <p className="text-xs text-gray-400">
@@ -162,8 +162,8 @@ export function SubmitPage() {
               />
             </label>
           ) : (
-            <div className="border-2 border-primary-200 bg-primary-50 rounded-2xl p-6">
-              <div className="flex items-center gap-8">
+            <div className="border-2 border-primary-200 bg-primary-50 rounded-2xl p-[8rem]">
+              <div className="flex items-center gap-[10rem]">
                 <div className="w-12 h-12 rounded-2xl bg-primary-100 flex items-center justify-center">
                   <Film className="w-6 h-6 text-primary-600" />
                 </div>
@@ -188,7 +188,7 @@ export function SubmitPage() {
                 </button>
               </div>
               {uploading && (
-                <div className="mt-3 h-2 bg-primary-100 rounded-full overflow-hidden">
+                <div className="mt-[4rem] h-2 bg-primary-100 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-primary-500 rounded-full transition-all duration-300"
                     style={{ width: `${uploadProgress}%` }}
@@ -201,14 +201,14 @@ export function SubmitPage() {
 
         {/* Film Details */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-8 flex items-center gap-2">
+          <h2 className="text-xl font-bold mb-[10rem] flex items-center gap-2">
             <Film className="w-5 h-5 text-primary-500" />
             Film Details
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-[5rem]">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-3">
+              <label className="block text-sm font-medium text-gray-700 mb-[4rem]">
                 Film Title <span className="text-red-500">*</span>
               </label>
               <input
@@ -220,9 +220,9 @@ export function SubmitPage() {
               />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-[10rem]">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-3">
+                <label className="block text-sm font-medium text-gray-700 mb-[4rem]">
                   Team Name <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -234,7 +234,7 @@ export function SubmitPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-3">Genre</label>
+                <label className="block text-sm font-medium text-gray-700 mb-[4rem]">Genre</label>
                 <select
                   value={formData.genre}
                   onChange={(e) => setFormData({ ...formData, genre: e.target.value })}
@@ -249,7 +249,7 @@ export function SubmitPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-3">
+              <label className="block text-sm font-medium text-gray-700 mb-[4rem]">
                 <Users className="w-4 h-4 inline mr-1" />
                 Team Members
               </label>
@@ -263,7 +263,7 @@ export function SubmitPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-3">
+              <label className="block text-sm font-medium text-gray-700 mb-[4rem]">
                 Description <span className="text-red-500">*</span>
               </label>
               <textarea
@@ -282,17 +282,17 @@ export function SubmitPage() {
 
         {/* Submission Checklist */}
         <div className="card">
-          <h2 className="text-xl font-bold mb-8 flex items-center gap-2">
+          <h2 className="text-xl font-bold mb-[10rem] flex items-center gap-2">
             <AlertCircle className="w-5 h-5 text-primary-500" />
             Submission Checklist
           </h2>
 
-          <div className="space-y-3">
+          <div className="space-y-[4rem]">
             {CHECKLIST.map((item) => (
               <label
                 key={item.id}
                 className={cn(
-                  'flex items-center gap-3 p-3 rounded-2xl cursor-pointer transition-all',
+                  'flex items-center gap-[4rem] p-[4rem] rounded-2xl cursor-pointer transition-all',
                   checkedItems.includes(item.id)
                     ? 'bg-success-400/10 border border-success-500/30'
                     : 'bg-gray-50 border border-transparent hover:bg-gray-100'
@@ -325,7 +325,7 @@ export function SubmitPage() {
           </div>
 
           {checkedItems.length === CHECKLIST.length && (
-            <div className="mt-4 p-3 bg-success-400/10 border border-success-500/30 rounded-2xl">
+            <div className="mt-[5rem] p-[4rem] bg-success-400/10 border border-success-500/30 rounded-2xl">
               <p className="text-success-700 font-medium">
                 ✓ All checks complete! You're ready to submit.
               </p>

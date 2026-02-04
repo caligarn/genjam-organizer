@@ -91,11 +91,11 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
   const instruction = STEP_INSTRUCTIONS[currentStep] || STEP_INSTRUCTIONS[1];
 
   return (
-    <div className={cn('space-y-5 sm:space-y-6', className)}>
+    <div className={cn('space-y-[6rem] sm:space-y-[8rem]', className)}>
       {/* Countdown Timer Card - Machine Cinema style */}
       <div
         className={cn(
-          'rounded-2xl p-8 sm:p-10 text-center transition-all duration-500 border-3',
+          'rounded-2xl p-[10rem] sm:p-[13rem] text-center transition-all duration-500 border-3',
           isExpired
             ? 'bg-gray-200 border-gray-400 text-gray-600'
             : isWarning
@@ -107,14 +107,14 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
           boxShadow: isExpired ? 'none' : '6px 6px 0 #FFD700'
         }}
       >
-        <div className="flex items-center justify-center gap-2 mb-8">
+        <div className="flex items-center justify-center gap-10 mb-[10rem]">
           <Clock className="w-5 h-5 opacity-90" />
           <span className="text-sm font-bold uppercase tracking-widest opacity-90">
             {isExpired ? "Time's Up!" : 'Event Deadline'}
           </span>
         </div>
 
-        <div className="flex items-center justify-center gap-6 sm:gap-8">
+        <div className="flex items-center justify-center gap-[8rem] sm:gap-[10rem]">
           <div className="flex flex-col items-center">
             <span className="countdown-digit text-[#FFD700]">{formatNumber(timeLeft.hours)}</span>
             <span className="countdown-label">Hours</span>
@@ -132,7 +132,7 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
         </div>
 
         {isWarning && !isExpired && (
-          <p className="mt-6 text-sm font-bold animate-pulse bg-white/20 rounded-full px-6 py-2 inline-block uppercase">
+          <p className="mt-[8rem] text-sm font-bold animate-pulse bg-white/20 rounded-full px-6 py-2 inline-block uppercase">
             ⚠️ Less than 30 minutes remaining!
           </p>
         )}
@@ -140,14 +140,14 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
 
       {/* Contextual Instructions Card - Machine Cinema style */}
       <div 
-        className="bg-white rounded-2xl p-6 sm:p-8 border-3"
+        className="bg-white rounded-2xl p-[8rem] sm:p-[10rem] border-3"
         style={{ 
           borderWidth: '3px',
           borderColor: '#1a1a1a',
           boxShadow: '6px 6px 0 #1a1a1a'
         }}
       >
-        <div className="flex gap-4">
+        <div className="flex gap-[5rem]">
           <div className="flex-shrink-0">
             <div 
               className="w-12 h-12 rounded-xl flex items-center justify-center"
@@ -156,7 +156,7 @@ export function EventTimer({ currentStep, deadline, className }: EventTimerProps
               <Info className="w-6 h-6 text-[#1a1a1a]" />
             </div>
           </div>
-          <div className="flex-1 space-y-3">
+          <div className="flex-1 space-y-[4rem]">
             <p className="text-base sm:text-lg text-[#1a1a1a] leading-relaxed font-medium">{instruction.current}</p>
             <p className="text-sm sm:text-base text-[#FF3366] font-bold flex items-center gap-2">
               <Lightbulb className="w-4 h-4 flex-shrink-0" />
